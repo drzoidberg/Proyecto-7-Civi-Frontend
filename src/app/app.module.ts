@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 // componentes
 import { AppComponent } from './app.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
