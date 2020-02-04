@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginUsuarioComponent implements OnInit {
 
+  usuario:Login={
+    "email":'',
+    "contrasenia":''
+  }
+
   constructor() { }
 
   ngOnInit() {

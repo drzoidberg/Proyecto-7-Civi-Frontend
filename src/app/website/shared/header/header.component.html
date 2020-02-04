@@ -1,15 +1,28 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 contenedor">
             <ul>
-                <a routerLink="/" routerLinkActive="active-link">Home</a>
+                <a routerLink="/home" routerLinkActive="active-link"> 
+                    <img src="" alt="Foto de logo" /> 
+                </a>
          
             </ul>
+
             <ul>
-         
-                <a routerLink="/login" routerLinkActive="active-link">Empresa </a>
-                <a routerLink="/login" value="algo" routerLinkActive="active-link">Candidato </a>
+                <a routerLink="/login-empresa" routerLinkActive="active-link">Empresa </a>
             </ul> 
+            <ul>
+                <a routerLink="/login-candidato" value="algo" routerLinkActive="active-link">Candidato </a>
+
+            </ul>
         </div>
     </div>
 </div>
+
+            <!-- <div *ngIf="usuario2" [ngClass]="'cajaUsuario'">
+                <a class="nav-link" routerLink="/usuarios/verperfil" routerLinkActive="active-link">Ver Perfiles
+                </a>
+                <a class="nav-link" routerLink="/alquilarpeliculas" routerLinkActive="active-link">Alquilar
+                    Películas </a>
+                <a class="nav-link" (click)=prueba() href="/">Desconectar </a>
+            </div> -->

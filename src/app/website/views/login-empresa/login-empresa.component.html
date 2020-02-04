@@ -1,1 +1,22 @@
-<p>login-empresa works!</p>
+
+<div class="cajaGeneral">
+    <div class="formularios">
+        <div class="cajaFormulario"> 
+            <form (submit)='conectarCuenta()' #form="ngForm">
+                <p>Email</p>
+                <input class="form-control" type="text" matInput [(ngModel)]="empresa.email" [ngModelOptions]="{standalone: true}">
+                
+            
+                <p>Contraseña</p>
+                <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
+               <button class="btn btn-primary">Enviar</button>
+            </form>
+       
+       
+    <div>
+        <p>¿No tienes cuenta?</p>
+        <!-- <a routerLink="/usuario/registro" routerLinkActive="active-link">Registrate aqui </a> -->
+        <a routerLink="/usuario/registro"  routerLinkActive="active-link">Registrate </a>
+   
+</div>
+</div>

@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-loginEmpresa='Empresa'
-loginUsuario='Usuario'
+  usuario = 0
   ngOnInit() {
   }
 
