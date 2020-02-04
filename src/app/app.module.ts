@@ -24,6 +24,7 @@ import { OfertasComponent } from './website/components/ofertas/ofertas.component
 import { PredefinedQueryComponent } from './website/components/predefined-query/predefined-query.component';
 import { PredefinedQueryListComponent } from './website/components/predefined-query-list/predefined-query-list.component';
 import { SearchComponent } from './website/components/search/search.component';
+import { HomeComponent } from './website/components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SearchComponent } from './website/components/search/search.component';
     PredefinedQueryComponent,
     PredefinedQueryListComponent,
     SearchComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
