@@ -28,12 +28,14 @@ export class WebsiteService {
     return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
   }
   filtroCiudades():Observable<any>{
-    return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
+    return this.http.get('http://localhost:8000/ofertas/ciudades', {responseType:'text' as 'json'} );
   }
-  filtroCiudad():Observable<any>{
-    return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
+  filtroCiudad(ciudad):Observable<any>{
+    return this.http.get(`http://localhost:8000/ofertas/ciudad/${ciudad}`, {responseType:'text' as 'json'} );
+  }
+
     filtroAnuncios():Observable<any>{
       return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
     }
   }
-}
+

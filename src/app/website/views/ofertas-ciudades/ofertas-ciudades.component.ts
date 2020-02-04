@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WebsiteService } from '../../services/website.service';
+import { Filtros } from 'src/app/models/filtros.model';
 
 @Component({
   selector: 'app-ofertas-ciudades',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ofertas-ciudades.component.scss']
 })
 export class OfertasCiudadesComponent implements OnInit {
-
-  constructor() { }
+  ofertaCiudades:Array<Filtros>
+  constructor(private website:WebsiteService) { }
 
   ngOnInit() {
+    this.website.filtroCiudades().subscribe(res=> this.ofertaCiudades=  JSON.parse(res));
   }
 
 }

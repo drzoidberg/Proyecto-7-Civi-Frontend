@@ -1,1 +1,14 @@
-<p>ofertas-ciudades works!</p>
+<div>
+    <div>
+        <app-filter-form></app-filter-form>
+    </div>
+    <div *ngFor="let oferta of ofertaCiudades">
+       <p>
+        {{oferta.titulo}}
+       </p>
+       <p>
+        {{oferta.nombre}}
+       </p>
+       
+    </div>
+</div>
