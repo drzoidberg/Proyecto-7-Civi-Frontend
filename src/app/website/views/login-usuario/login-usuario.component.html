@@ -1,7 +1,7 @@
 <div class="cajaGeneral">
     <div class="formularios">
         <div class="cajaFormulario"> 
-            <form (submit)='conectarCuenta()' #form="ngForm">
+            <form (submit)='crearUsuario()' #form="ngForm">
                 <p>Email</p>
                 <input class="form-control" type="text" matInput [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}">
                 
@@ -15,7 +15,7 @@
     <div>
         <p>¿No tienes cuenta?</p>
         <!-- <a routerLink="/usuario/registro" routerLinkActive="active-link">Registrate aqui </a> -->
-        <a routerLink="/registro"  routerLinkActive="active-link">Registrate </a>
+        <a routerLink="/registro-candidato"  routerLinkActive="active-link">Registrate </a>
    
 </div>
 </div>
