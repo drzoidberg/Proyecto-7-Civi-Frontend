@@ -30,6 +30,7 @@ import { OfertasCiudadComponent } from './website/views/ofertas-ciudad/ofertas-c
 import { OfertasCiudadesComponent } from './website/views/ofertas-ciudades/ofertas-ciudades.component';
 import { OfertasAnuncioComponent } from './website/views/ofertas-anuncio/ofertas-anuncio.component';
 import { OfertasPuestoComponent } from './website/views/ofertas-puesto/ofertas-puesto.component';
+import { OfertasComponent } from './website/views/ofertas/ofertas.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { OfertasPuestoComponent } from './website/views/ofertas-puesto/ofertas-p
     OfertasCiudadesComponent,
     OfertasAnuncioComponent,
     OfertasPuestoComponent,
+    OfertasComponent,
   ],
   imports: [
     BrowserModule,

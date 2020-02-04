@@ -24,6 +24,14 @@ export class WebsiteService {
     return this.http.post('http://localhost:8000/usuario/registro', usuario, {responseType:'text' as 'json'} );
   }
 
+
+
+
+
+  todasOfertas():Observable<any>{
+    return this.http.get('http://localhost:8000/ofertas/ofertas', {responseType:'text' as 'json'} );
+  
+  }
   filtroPopularidad():Observable<any>{
     return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
   }
