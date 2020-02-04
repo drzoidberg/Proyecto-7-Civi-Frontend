@@ -17,14 +17,14 @@ import { DashboardUsuarioComponent } from './cms/components/dashboard-usuario/da
 import { PerfilUsuarioComponent } from './cms/components/perfil-usuario/perfil-usuario.component';
 import { PerfilEmpresaComponent } from './cms/components/perfil-empresa/perfil-empresa.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { FilterFormComponent } from './website/components/filter-form/filter-form.component';
-import { FooterComponent } from './website/components/footer/footer.component';
-import { HeaderComponent } from './website/components/header/header.component';
-import { OfertasComponent } from './website/components/ofertas/ofertas.component';
-import { PredefinedQueryComponent } from './website/components/predefined-query/predefined-query.component';
-import { PredefinedQueryListComponent } from './website/components/predefined-query-list/predefined-query-list.component';
-import { SearchComponent } from './website/components/search/search.component';
-import { HomeComponent } from './website/components/home/home.component';
+import { FilterFormComponent } from './website/shared/filter-form/filter-form.component';
+import { FooterComponent } from './website/shared/footer/footer.component';
+import { HeaderComponent } from './website/shared/header/header.component';
+import { OfertasComponent } from './website/views/ofertas/ofertas.component';
+import { PredefinedQueryComponent } from './website/views/predefined-query/predefined-query.component';
+import { PredefinedQueryListComponent } from './website/views/predefined-query-list/predefined-query-list.component';
+import { SearchComponent } from './website/shared/search/search.component';
+import { HomeComponent } from './website/views/home/home.component';
 import { LoginComponent } from './website/views/login/login.component';
 import { RegisterComponent } from './website/views/register/register.component';
 
