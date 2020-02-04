@@ -25,6 +25,8 @@ import { PredefinedQueryComponent } from './website/components/predefined-query/
 import { PredefinedQueryListComponent } from './website/components/predefined-query-list/predefined-query-list.component';
 import { SearchComponent } from './website/components/search/search.component';
 import { HomeComponent } from './website/components/home/home.component';
+import { LoginComponent } from './website/views/login/login.component';
+import { RegisterComponent } from './website/views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { HomeComponent } from './website/components/home/home.component';
     PredefinedQueryListComponent,
     SearchComponent,
     HomeComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
