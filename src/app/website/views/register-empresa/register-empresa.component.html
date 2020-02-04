@@ -1,1 +1,19 @@
-<p>register-empresa works!</p>
+<form (submit)='crearEmpresa()' #form="ngForm">
+    <p>NIF</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="empresa.nif" [ngModelOptions]="{standalone: true}">
+    <p>Email</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="empresa.email" [ngModelOptions]="{standalone: true}">
+    <p>Contraseña</p>
+    <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
+    <p>Descripcion</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="empresa.descripcion_empresa" [ngModelOptions]="{standalone: true}">
+    <p>Foto</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="empresa.foto" [ngModelOptions]="{standalone: true}">
+
+    <p>Nombre de Empresa</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="empresa.nombre_empresa" [ngModelOptions]="{standalone: true}">
+    <p>Tipo Trabajo</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="empresa.id_categoria" [ngModelOptions]="{standalone: true}">
+    
+   <button class="btn btn-primary">Enviar</button>
+</form>

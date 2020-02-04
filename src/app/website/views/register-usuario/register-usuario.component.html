@@ -1,1 +1,24 @@
-<p>register-usuario works!</p>
+    <form (submit)='crearUsuario()' #form="ngForm">
+    <p>Nombre</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.nombre_usuario" [ngModelOptions]="{standalone: true}">
+    <p>Apellido</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}">
+    <p>Email</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}">
+    <p>Contraseña</p>
+    <input class="form-control" type="password" matInput [(ngModel)]="usuario.contrasenia" [ngModelOptions]="{standalone: true}">
+    <p>DNI</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.dni" [ngModelOptions]="{standalone: true}">
+    <p>Descripcion</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.descripcion" [ngModelOptions]="{standalone: true}">
+    <p>Telefono</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}">
+    <p>Direccion</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.direccion" [ngModelOptions]="{standalone: true}">
+    <p>Foto</p>
+    <input class="form-control" type="text" matInput [(ngModel)]="usuario.foto" [ngModelOptions]="{standalone: true}">
+    <p>Fecha De Nacimiento</p>
+    <input class="form-control" type="Date" matInput [(ngModel)]="usuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}">
+    
+   <button class="btn btn-primary">Enviar</button>
+</form>
