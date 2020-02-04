@@ -8,10 +8,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // componentes
 import { AppComponent } from './app.component';
-import { LoginEmpresaComponent } from './auth/components/login-empresa/login-empresa.component';
-import { LoginUsuarioComponent } from './auth/components/login-usuario/login-usuario.component';
-import { RegisterUsuarioComponent } from './auth/components/register-usuario/register-usuario.component';
-import { RegisterEmpresaComponent } from './auth/components/register-empresa/register-empresa.component';
+import { LoginEmpresaComponent } from './website/views/login-empresa/login-empresa.component';
+import { LoginUsuarioComponent } from './website/views/login-usuario/login-usuario.component';
+import { RegisterUsuarioComponent } from './website/views/register-usuario/register-usuario.component';
+import { RegisterEmpresaComponent } from './website/views/register-empresa/register-empresa.component';
 import { DashboardEmpresaComponent } from './cms/components/dashboard-empresa/dashboard-empresa.component';
 import { DashboardUsuarioComponent } from './cms/components/dashboard-usuario/dashboard-usuario.component';
 import { PerfilUsuarioComponent } from './cms/components/perfil-usuario/perfil-usuario.component';
@@ -25,8 +25,6 @@ import { PredefinedQueryComponent } from './website/views/predefined-query/prede
 import { PredefinedQueryListComponent } from './website/views/predefined-query-list/predefined-query-list.component';
 import { SearchComponent } from './website/shared/search/search.component';
 import { HomeComponent } from './website/views/home/home.component';
-import { LoginComponent } from './website/views/login/login.component';
-import { RegisterComponent } from './website/views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +46,6 @@ import { RegisterComponent } from './website/views/register/register.component';
     PredefinedQueryListComponent,
     SearchComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterComponent,
   ],
   imports: [
     BrowserModule,
