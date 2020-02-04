@@ -35,7 +35,10 @@ export class WebsiteService {
   }
 
     filtroAnuncios():Observable<any>{
-      return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
+      return this.http.get('http://localhost:8000/ofertas/anuncio', {responseType:'text' as 'json'} );
+    }
+    filtroPuesto(puesto):Observable<any>{
+      return this.http.get(`http://localhost:8000/ofertas/puesto/${puesto}`, {responseType:'text' as 'json'} );
     }
   }
 
