@@ -22,7 +22,7 @@ export class LoginUsuarioComponent implements OnInit {
     this.website.loginUsuario(this.usuario).subscribe(res=>   {
       let mensaje= 'Contrasenia o correo invalido';
       if((res !== mensaje) ){
-      localStorage.setItem('usuario', res), setTimeout(() => {
+      localStorage.setItem('Usuario', res), setTimeout(() => {
     location.reload(true);
   }, 1000),  setTimeout(() => {
     this.router.navigate(['/'])
