@@ -1,1 +1,30 @@
-<p>dashboard-empresa-solicitud works!</p>
+<div>
+    <div *ngFor="let solicitud of solicitudes[0]" >
+        <p>{{solicitud.solicitudes_num_solicitud}}</p>
+        <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+            <p>{{solicitud.solicitudes_estado}}</p>
+
+        </div>
+        <div *ngIf= "solicitud.solicitudes_estado === 'Pendiente'">
+            <p>{{solicitud.solicitudes_estado}}</p>
+            <button (click)="cambiarSolicitud('Aceptado', solicitud.solicitudes_num_solicitud)">
+                Aceptar
+            </button>
+            <button (click)="cambiarSolicitud('Rechazado', solicitud.solicitudes_num_solicitud)">
+                Rechazar
+            </button>
+
+        </div>
+        <p>{{solicitud.oferta_trabajos_titulo}}</p>
+        <p>{{solicitud.usuarios_nombre}}</p>
+        <p>{{solicitud.usuarios_apellido}}</p>
+        <p>{{solicitud.usuarios_descripcion}}</p>  
+        <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+            
+            <button (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
+        </div>
+
+    </div>
+</div>
+
+

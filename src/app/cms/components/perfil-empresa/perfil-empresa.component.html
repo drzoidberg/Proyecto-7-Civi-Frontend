@@ -1,1 +1,32 @@
-<p>perfil-empresa works!</p>
+<div>
+    <p>Foto</p>
+   <img src={{Empresa[0].foto}}>
+    <p>Nombre</p>
+    <p>{{Empresa[0].nombre_empresa}}</p>
+    <p>Apellido</p>
+    <p>{{Empresa[0].apellido}}</p>
+    <p>Email</p>
+    <p>{{Empresa[0].email}}</p>
+    <p>DNI</p>
+    <p>{{Empresa[0].dni}}</p>
+    <p>Descripcion</p>
+    <p>{{Empresa[0].descripcion}}</p>
+    <p>Telefono</p>
+    <p>{{Empresa[0].Telefono}}</p>
+    <p>Fecha Nacimiento</p>
+    <p>{{Empresa[0].fecha_nacimiento}}</p>
+</div>
+
+<div>
+    <form (submit)='cambiarPerfilUsuario()'>
+        <label>Foto</label>
+        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}" >
+        <label>NIF</label>
+        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nif" [ngModelOptions]="{standalone: true}" >
+        <label>Nombre</label>
+        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nombre_empresa" [ngModelOptions]="{standalone: true}" >
+        <label>Descripcion</label>
+        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.descripcion_empresa" [ngModelOptions]="{standalone: true}" >
+        <button class="btn btn-primary">Enviar</button>
+   </form>
+</div>

@@ -1,1 +1,43 @@
-<p>perfil-usuario works!</p>
+<div>
+    <div>
+        <p>Foto</p>
+       <img src={{Usuario[0].foto}}>
+        <p>Nombre</p>
+        <p>{{Usuario[0].nombre_usuario}}</p>
+        <p>Apellido</p>
+        <p>{{Usuario[0].apellido}}</p>
+        <p>Email</p>
+        <p>{{Usuario[0].email}}</p>
+        <p>DNI</p>
+        <p>{{Usuario[0].dni}}</p>
+        <p>Descripcion</p>
+        <p>{{Usuario[0].descripcion}}</p>
+        <p>Telefono</p>
+        <p>{{Usuario[0].Telefono}}</p>
+        <p>Fecha Nacimiento</p>
+        <p>{{Usuario[0].fecha_nacimiento}}</p>
+    </div>
+
+    <div>
+        <form (submit)='cambiarPerfilUsuario()'>
+            <label>Nombre</label>
+            <input class="form-control" name="nombre" type="text" [(ngModel)]="nuevoUsuario.nombre_usuario" [ngModelOptions]="{standalone: true}" >
+            <label>Apellido</label>
+            <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.apellido" [ngModelOptions]="{standalone: true}" >
+            <label>Email</label>
+            <p>{{Usuario[0].email}}</p>
+            <label>dni</label>
+            <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.dni" [ngModelOptions]="{standalone: true}" >
+            <label>Descripcion</label>
+            <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.descripcion" [ngModelOptions]="{standalone: true}" >
+            <label>Telefono</label>
+            <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.telefono" [ngModelOptions]="{standalone: true}" >
+            <label>Foto</label>
+            <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}" >
+            <label>Fecha Nacimiento</label>
+            <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}" >
+            <button class="btn btn-primary">Enviar</button>
+       </form>
+    </div>
+    
+    </div>
