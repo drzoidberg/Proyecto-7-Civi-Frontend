@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   usuario = 0
+  empresa
   ngOnInit() {
   }
 

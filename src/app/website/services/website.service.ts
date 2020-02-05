@@ -16,6 +16,7 @@ export class WebsiteService {
   }
   loginEmpresa(empresa:Login):Observable<any>{
     return this.http.post('http://localhost:8000/empresa/login', empresa, {responseType:'text' as 'json'} );
+    
   }
   registroEmpresa(empresa:Empresa):Observable<any>{
     return this.http.post('http://localhost:8000/empresa/registro', empresa, {responseType:'text' as 'json'} );

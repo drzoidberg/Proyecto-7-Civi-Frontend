@@ -11,6 +11,10 @@ import { OfertasCiudadComponent } from './website/views/ofertas-ciudad/ofertas-c
 import { OfertasAnuncioComponent } from './website/views/ofertas-anuncio/ofertas-anuncio.component';
 import { OfertasPuestoComponent } from './website/views/ofertas-puesto/ofertas-puesto.component';
 import { OfertasComponent } from './website/views/ofertas/ofertas.component';
+import { PerfilUsuarioComponent } from './cms/components/perfil-usuario/perfil-usuario.component';
+import { PerfilEmpresaComponent } from './cms/components/perfil-empresa/perfil-empresa.component';
+import { DashboardEmpresaSolicitudComponent } from './cms/components/dashboard-empresa-solicitud/dashboard-empresa-solicitud.component';
+import { DashboardEmpresaOfertaComponent } from './cms/components/dashboard-empresa-oferta/dashboard-empresa-oferta.component';
 
 
 const routes: Routes = [
@@ -26,6 +30,11 @@ const routes: Routes = [
   {path:"filtro-ciudad", component:OfertasCiudadComponent},
   {path:"filtro-destacados", component:OfertasAnuncioComponent},
   {path:"filtro-puesto-trabajo", component:OfertasPuestoComponent},
+  {path:"ver-perfil-candidato", component:PerfilUsuarioComponent},
+  {path:"ver-perfil-empresa", component:PerfilEmpresaComponent},
+  {path:"administrar-solicitud-empresa", component:DashboardEmpresaSolicitudComponent},
+  {path:"administrar-ofertas-empresa", component:DashboardEmpresaOfertaComponent},
+  
 ];
 
 @NgModule({
