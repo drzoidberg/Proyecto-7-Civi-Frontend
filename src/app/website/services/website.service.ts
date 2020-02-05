@@ -29,13 +29,29 @@ export class WebsiteService {
   }
 
   logoutEmpresa(empresa):Observable<any>{
+   let desconectarEmpresa=JSON.parse(empresa);
+    console.log(empresa)
+  //  let prueba={ responseType:'text' as 'json', 'Authorization':desconectarempresa[0].remember_token }
+    // console.log(empresa)
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization':empresa.remember_token })
+      headers: new HttpHeaders({  'Authorization':empresa[0].remember_token })
     };
-    return this.http.post('http://localhost:8000/empresa/desconectarempresa', empresa.id, httpOptions );
+    return this.http.post('http://localhost:8000/empresa/desconectarempresa', desconectarEmpresa[0] , {responseType:'text' as 'json'});
 
   }
 
+
+  logoutUsuario(Usuario):Observable<any>{
+    let desconectarUsuario=JSON.parse(Usuario);
+     console.log(desconectarUsuario)
+   //  let prueba={ responseType:'text' as 'json', 'Authorization':desconectarUsuario[0].remember_token }
+     // console.log(Usuario)
+     const httpOptions = {
+       headers: new HttpHeaders({  'Authorization':Usuario[0].remember_token })
+     };
+     return this.http.post('http://localhost:8000/usuario/desconectarusuario', desconectarUsuario[0] , {responseType:'text' as 'json'});
+ 
+   }
 
 
 

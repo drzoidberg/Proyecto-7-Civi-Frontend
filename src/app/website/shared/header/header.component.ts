@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from '../../services/website.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,13 +9,34 @@ import { WebsiteService } from '../../services/website.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private website:WebsiteService) { }
+  constructor(private website:WebsiteService, private router:Router) { }
   Usuario = localStorage.getItem('Usuario')
-  Empresa = localStorage.getItem('Empresa')
+  Empresa = localStorage.getItem('Empresa');
+
+
+
+  desconectarUsuario(){
+    console.log('Hola')
+    this.website.logoutUsuario(this.Usuario).subscribe(res =>  {
+      console.log(res),
+      localStorage.removeItem('Usuario'), setTimeout(() => {
+    location.reload(true);
+  }, 1000),  setTimeout(() => {
+    this.router.navigate(['/'])
+  }, 999)})
+
+  }
 
 
   desconectarEmpresa(){
-    this.website.logoutEmpresa(this.Empresa).subscribe(res => console.log(res))
+    console.log('Hola')
+    this.website.logoutEmpresa(this.Empresa).subscribe(res =>  {
+      console.log(res),
+      localStorage.removeItem('Empresa'), setTimeout(() => {
+    location.reload(true);
+  }, 1000),  setTimeout(() => {
+    this.router.navigate(['/'])
+  }, 999)})
 
   }
   ngOnInit() {
