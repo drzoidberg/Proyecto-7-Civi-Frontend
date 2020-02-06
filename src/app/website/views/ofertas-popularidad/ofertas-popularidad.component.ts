@@ -9,6 +9,7 @@ import { Filtros } from 'src/app/models/filtros.model';
 })
 export class OfertasPopularidadComponent implements OnInit {
 ofertaPopularidad:Array<Filtros>
+Usuario=localStorage.getItem('Usuario')
   constructor(private website:WebsiteService) { }
 
   ngOnInit() {
