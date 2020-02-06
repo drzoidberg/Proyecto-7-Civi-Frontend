@@ -53,6 +53,7 @@ export class CmsService {
      return this.http.post(`http://localhost:8000/empresa/borrarsolicitud`, datos, httpOptions);
  
    }
+
    administrarSolicitud(respuesta , numeroSolicitud ,Empresa):Observable<any>{
     let EmpresaJson= JSON.parse(Empresa);
     let datos={
@@ -69,5 +70,28 @@ export class CmsService {
  
    }
 
+   verOfertas(Empresa):Observable<any>{
+    let EmpresaJson= JSON.parse(Empresa);
+    console.log(EmpresaJson[0])
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':EmpresaJson[0].remember_token })
+     };
+     return this.http.get(`http://localhost:8000/empresa/verofertas/${EmpresaJson[0].id}` , httpOptions);
+ 
+   }
 
+borrarOferta(id , Empresa):Observable<any>{
+    let EmpresaJson= JSON.parse(Empresa);
+    let datos={
+      id:id,
+      id_empresa:EmpresaJson[0].id,
+      remember_token:EmpresaJson[0].remember_token
+    }
+    console.log(datos)
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':datos.remember_token })
+     };
+     return this.http.post(`http://localhost:8000/empresa/borrarofertatrabajo`, datos, httpOptions);
+ 
+   }
 }

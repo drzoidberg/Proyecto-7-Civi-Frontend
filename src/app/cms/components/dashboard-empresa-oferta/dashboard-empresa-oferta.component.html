@@ -1,1 +1,14 @@
-<p>dashboard-empresa works!</p>
+
+
+<div>
+    <div *ngFor="let oferta of ofertas" >
+                <p>{{oferta.id_trabajos}}</p>
+            <p>{{oferta.titulo}}</p>
+            <p>{{oferta.descripcion_oferta}}</p>
+            <p>{{oferta.popularidad}}</p>
+            <p>{{oferta.fecha_publicacion}}</p>
+            <button (click)="borrarOferta(oferta.id_trabajos)">X</button>
+    </div>
+</div>
+
+
