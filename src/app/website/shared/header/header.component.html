@@ -1,20 +1,146 @@
-<div class="container">
-    <div class="row">
-        
-        
-        <div  *ngIf="Empresa" [ngClass]="'cajaUsuario'" class="col-md-12 contenedor">
+<div class="container-fluid">
+    <!-- header empresa -->
+    <nav *ngIf="Empresa" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
+        <a routerLink="/home" routerLinkActive="active-link">
+            <img src="" alt="Foto de logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- buttons-right -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/ofertas"
+                        routerLinkActive="active-link">BUSCAR EMPLEO</a>
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/ver-perfil-empresa"
+                        value="algo"
+                        routerLinkActive="active-link">Perfil Empresa</a>
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/administrar-solicitud-empresa"
+                        routerLinkActive="active-link">Panel solicitudes</a>
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/administrar-ofertas-empresa"
+                        value="algo"
+                        routerLinkActive="active-link">Administrar Ofertas</a>
+
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button
+                    class="btn btn-outline-dark my-2 mr-sm-2"
+                    type="submit">ACCESO EMPRESAS</button>
+                <button
+                    class="btn btn-outline-primary my-2 mr-sm-2"
+                    type="submit">ACCESO CANDIDATOS</button>
+                <button
+                    class="btn btn-outline-primary my-2 mr-sm-2"
+                    (click)="desconectarEmpresa()">Desconectar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- fin header empresa -->
+
+    <!-- header usuario -->
+    <nav *ngIf="Usuario" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
+        <a routerLink="/home" routerLinkActive="active-link">
+            <img src="" alt="Foto de logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- buttons-right -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/ofertas"
+                        routerLinkActive="active-link">BUSCAR EMPLEO</a>
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="ver-perfil-candidato"
+                        value="algo"
+                        routerLinkActive="active-link">Perfil</a>
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/administrar-solicitud-candidato"
+                        routerLinkActive="active-link">Panel solicitudes</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button
+                    class="btn btn-outline-primary my-2 mr-sm-2"
+                    (click)="desconectarEmpresa()">Desconectar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- fin header usuario -->
+
+    <!-- header anonimo -->
+    <nav *ngIf="!Usuario && !Empresa" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
+        <a routerLink="/home" routerLinkActive="active-link">
+            <img src="" alt="Foto de logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- buttons-right -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a
+                        class="btn btn-warning my-2 mr-sm-2"
+                        routerLink="/ofertas"
+                        routerLinkActive="active-link">BUSCAR EMPLEO</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button
+                    class="btn btn-outline-dark my-2 mr-sm-2"
+                    type="submit">ACCESO EMPRESAS</button>
+                <button
+                    class="btn btn-outline-primary my-2 mr-sm-2"
+                    type="submit">ACCESO CANDIDATOS</button>
+            </form>
+        </div>
+    </nav>
+    <!-- fin header anonimo -->
+
+
+
+</div>
+
+
+<!-- <div class="container">
+    <div class="row"> -->
+
+
+        <!-- <div  *ngIf="Empresa" [ngClass]="'cajaUsuario'" class="col-md-12 contenedor">
             <ul>
-                <a routerLink="/home" routerLinkActive="active-link"> 
-                    <img src="" alt="Foto de logo" /> 
+                <a routerLink="/home" routerLinkActive="active-link">
+                    <img src="" alt="Foto de logo" />
                 </a>
-         
+
             </ul>
 
             <ul>
                 <a routerLink="/ofertas" routerLinkActive="active-link">Buscar empleo </a>
-            </ul> 
-          
-                
+            </ul>
+
+
             <ul>
                 <a routerLink="/ver-perfil-empresa" value="algo" routerLinkActive="active-link">Perfil Empresa </a>
 
@@ -30,21 +156,21 @@
             <ul>
                 <button (click)="desconectarEmpresa()">Desconectar</button>
             </ul>
-          </div>
+          </div> -->
 
-          <div *ngIf="Usuario" [ngClass]="'cajaUsuario'" class="col-md-12 contenedor">
+          <!-- <div *ngIf="Usuario" [ngClass]="'cajaUsuario'" class="col-md-12 contenedor">
             <ul>
-                <a routerLink="/home" routerLinkActive="active-link"> 
-                    <img src="" alt="Foto de logo" /> 
+                <a routerLink="/home" routerLinkActive="active-link">
+                    <img src="" alt="Foto de logo" />
                 </a>
-         
+
             </ul>
 
             <ul>
                 <a routerLink="/ofertas" routerLinkActive="active-link">Buscar empleo </a>
-            </ul> 
-          
-                
+            </ul>
+
+
             <ul>
                 <a routerLink="/ver-perfil-candidato" value="algo" routerLinkActive="active-link">Perfil</a>
 
@@ -57,39 +183,38 @@
                 <button (click)="desconectarUsuario()">Desconectar</button>
             </ul>
 
-          </div>
+          </div> -->
 
 
 
           <!-- Anonimo -->
-          <div *ngIf="!Usuario && !Empresa" [ngClass]="'cajaUsuario'"class="col-md-12 contenedor">
+          <!-- <div *ngIf="!Usuario && !Empresa" [ngClass]="'cajaUsuario'"class="col-md-12 contenedor">
             <ul>
-                <a routerLink="/home" routerLinkActive="active-link"> 
-                    <img src="" alt="Foto de logo" /> 
+                <a routerLink="/home" routerLinkActive="active-link">
+                    <img src="" alt="Foto de logo" />
                 </a>
-         
+
             </ul>
 
             <ul>
                 <a routerLink="/ofertas" routerLinkActive="active-link">Buscar empleo </a>
-            </ul> 
-          
-                
+            </ul>
+
+
             <ul>
                 <a routerLink="/login-empresa" routerLinkActive="active-link">Empresa </a>
-            </ul> 
+            </ul>
             <ul>
                 <a routerLink="/login-candidato" value="algo" routerLinkActive="active-link">Candidato </a>
 
             </ul>
 
-          </div>
+          </div> -->
 
 
-           
-
-              
-  
 
 
-           
+
+
+
+
