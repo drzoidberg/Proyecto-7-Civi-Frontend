@@ -1,1 +1,23 @@
-<p>dashboard-usuario works!</p>
+<div>
+    <div *ngFor="let solicitud of solicitudes[0]" >
+        <p>{{solicitud.solicitudes_num_solicitud}}</p>
+        <p>{{solicitud.oferta_trabajos_titulo}}</p>
+        <p>{{solicitud.oferta_trabajos_titulo}}</p>
+        <p>{{solicitud.solicitudes_estado}}</p>
+        <p>{{solicitud.oferta_trabajos_fecha_publicacion}}</p>
+
+      
+        <div *ngIf= "solicitud.solicitudes_estado === 'Pendiente'">
+          
+            <button (click)="rechazarSolicitud(solicitud.solicitudes_num_solicitud)">
+                Cancelar
+            </button>
+
+        </div>
+        <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+            
+            <button (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
+        </div>
+
+    </div>
+</div>

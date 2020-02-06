@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Solicitudesusuario } from 'src/app/models/solicitudesusuario.model';
+import { CmsService } from '../../service/cms.service';
 
 @Component({
   selector: 'app-dashboard-usuario',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-usuario.component.scss']
 })
 export class DashboardUsuarioComponent implements OnInit {
+  Usuario= localStorage.getItem('Usuario');
+  solicitudes:Array<Solicitudesusuario>=[];
+  constructor(private cms:CmsService) { }
+ 
+  rechazarSolicitud(num){
+    console.log(num); 
+    this.cms.rechazarSolicitud(num, this.Usuario).subscribe(res => {console.log(res), location.reload(true)});
+  }
 
-  constructor() { }
-
+  borrarSolicitud(num){
+    console.log(num); 
+    this.cms.borrarSolicitudUsuario(num, this.Usuario).subscribe(res => {console.log(res), location.reload(true)});
+  }
   ngOnInit() {
+    this.cms.VerSolicitudesUsuario(this.Usuario).subscribe(res => this.solicitudes.push(res));
   }
 
 }

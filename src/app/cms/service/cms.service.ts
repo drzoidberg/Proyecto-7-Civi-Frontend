@@ -39,6 +39,16 @@ export class CmsService {
  
    }
 
+   VerSolicitudesUsuario(Usuario):Observable<any>{
+    let UsuarioJson= JSON.parse(Usuario);
+    console.log(UsuarioJson[0])
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':UsuarioJson[0].remember_token })
+     };
+     return this.http.get(`http://localhost:8000/usuario/versolicitudes/${UsuarioJson[0].id}` , httpOptions);
+ 
+   }
+
    borrarSolicitud(id , Empresa):Observable<any>{
     let EmpresaJson= JSON.parse(Empresa);
     let datos={
@@ -70,6 +80,21 @@ export class CmsService {
  
    }
 
+   rechazarSolicitud(numeroSolicitud ,Usuario):Observable<any>{
+    let UsuarioJson= JSON.parse(Usuario);
+    let datos={
+      id:numeroSolicitud,
+      id_usuario:UsuarioJson[0].id,
+      remember_token:UsuarioJson[0].remember_token
+    }
+    console.log(datos)
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':datos.remember_token })
+     };
+     return this.http.post(`http://localhost:8000/usuario/rechazarsolicitud`, datos, httpOptions);
+ 
+   }
+
    verOfertas(Empresa):Observable<any>{
     let EmpresaJson= JSON.parse(Empresa);
     console.log(EmpresaJson[0])
@@ -92,6 +117,20 @@ borrarOferta(id , Empresa):Observable<any>{
        headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':datos.remember_token })
      };
      return this.http.post(`http://localhost:8000/empresa/borrarofertatrabajo`, datos, httpOptions);
+ 
+   }
+   borrarSolicitudUsuario(id , Usuario):Observable<any>{
+    let UsuarioJson= JSON.parse(Usuario);
+    let datos={
+      id:id,
+      id_usuario:UsuarioJson[0].id,
+      remember_token:UsuarioJson[0].remember_token
+    }
+    console.log(datos)
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':datos.remember_token })
+     };
+     return this.http.post(`http://localhost:8000/usuario/borrarsolicitud`, datos, httpOptions);
  
    }
 }
