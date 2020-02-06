@@ -36,12 +36,6 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <button
-                    class="btn btn-outline-dark my-2 mr-sm-2"
-                    type="submit">ACCESO EMPRESAS</button>
-                <button
-                    class="btn btn-outline-primary my-2 mr-sm-2"
-                    type="submit">ACCESO CANDIDATOS</button>
-                <button
                     class="btn btn-outline-primary my-2 mr-sm-2"
                     (click)="desconectarEmpresa()">Desconectar</button>
             </form>
@@ -108,12 +102,14 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button
+                <a
+                    routerLink="/login-empresa" routerLinkActive="active-link"
                     class="btn btn-outline-dark my-2 mr-sm-2"
-                    type="submit">ACCESO EMPRESAS</button>
-                <button
+                    type="submit">ACCESO EMPRESAS</a>
+                <a
+                    routerLink="/login-candidato" value="algo" routerLinkActive="active-link"
                     class="btn btn-outline-primary my-2 mr-sm-2"
-                    type="submit">ACCESO CANDIDATOS</button>
+                    type="submit">ACCESO CANDIDATOS</a>
             </form>
         </div>
     </nav>
