@@ -1,21 +1,55 @@
-<div class="cajaGeneral">
-    <div class="formularios">
-        <div class="cajaFormulario"> 
-            <form (submit)='crearUsuario()' #form="ngForm">
-                <p>Email</p>
-                <input class="form-control" type="text" matInput [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}">
+
+    <div class="vistaLogin">
+    <div class="container">
+
+        <div class="row">
+          <div class="col-md-5 cajaIzquierda pt-4">
+            <div class="cajaFormulario-titulo">
+                <h2>Acceder como Candidato</h2>
+
+            </div>
+          
+            <form class="formulario" (submit)='crearUsuario()' #form="ngForm">
+                <div class="cajaFormulario-titulo">
+                    <p>Email</p>
+                    <input class="form-control" type="text" matInput [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}">
+
+                </div>
                 
-            
+                <div class="cajaFormulario-titulo, cajaFormulario-contrasenia">
                 <p>Contraseña</p>
                 <input class="form-control" type="password" matInput [(ngModel)]="usuario.contrasenia" [ngModelOptions]="{standalone: true}">
-               <button class="btn btn-primary">Enviar</button>
+              
+               </div>
+               
+                <button class="btn btn-primary , button">INICIA SESIÓN</button>
             </form>
        
        
-    <div>
-        <p>¿No tienes cuenta?</p>
-        <!-- <a routerLink="/usuario/registro" routerLinkActive="active-link">Registrate aqui </a> -->
-        <a routerLink="/registro-candidato"  routerLinkActive="active-link">Registrate </a>
-   
+        </div>
+
+        <div class="cajaVacia"></div>
+
+          <div class="col-md-5 cajaDerecha pt-4">
+            <h2>¿Eres nuevo/a?</h2>
+      
+        <div class="textoInformacion">
+            <h4>Crea tu CV</h4>
+            <p> Muestra a las empresas todo tu talento</p>
+
+            <h4>Inscríbete en las ofertas que te gustan</h4>
+            <p>Y sigue tus candidaturas</p>
+
+            <h4>Mantén actualizado tu CV</h4>
+            <p>Y dobla las posibilidades de ser contactado por la empresa que quieres</p>
+
+        </div>
+    
+        <button type="button" class="btn btn-outline-primary , button" routerLink="/registro-candidato"  routerLinkActive="active-link">Regístrate</button>
+        <!-- <a class="enlace" routerLink="/registro-candidato"  routerLinkActive="active-link">Registrate </a> -->
+
+    </div>
+    </div>
 </div>
+
 </div>
