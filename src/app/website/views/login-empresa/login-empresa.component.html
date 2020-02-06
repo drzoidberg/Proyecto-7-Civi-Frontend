@@ -1,22 +1,55 @@
 
-<div class="cajaGeneral">
-    <div class="formularios">
-        <div class="cajaFormulario"> 
-            <form (submit)='conectarEmpresa()' #form="ngForm">
-                <p>Email</p>
+
+
+<div class="vistaLogin">
+    <div class="container">
+
+        <div class="row">
+          <div class="col-md-5 cajaIzquierda pt-4">
+            <div class="cajaFormulario-titulo">
+                <h2>Acceder como Empresa</h2>
+
+            </div>
+          
+            <form class="formulario" (submit)='crearUsuario()' #form="ngForm">
+                <div class="cajaFormulario-titulo">
+                    <p>Email</p>
                 <input class="form-control" type="text" matInput [(ngModel)]="empresa.email" [ngModelOptions]="{standalone: true}">
+
+                </div>
                 
-            
-                <p>Contraseña</p>
-                <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
-               <button class="btn btn-primary">Enviar</button>
+                <div class="cajaFormulario-titulo, cajaFormulario-contrasenia">
+                    <p>Contraseña</p>
+                    <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
+              
+               </div>
+               
+                <button class="btn btn-primary , button">INICIA SESIÓN</button>
             </form>
        
        
-    <div>
-        <p>¿No tienes cuenta?</p>
-        <!-- <a routerLink="/usuario/registro" routerLinkActive="active-link">Registrate aqui </a> -->
-        <a routerLink="/registro-empresa"  routerLinkActive="active-link">Registrate </a>
-   
+        </div>
+
+        <div class="cajaVacia"></div>
+
+          <div class="col-md-5 cajaDerecha pt-4">
+            <h2>¿Eres nuevo/a?</h2>
+      
+        <div class="textoInformacion">
+            <h4>La mayor bolsa de CVs</h4>
+            
+
+            <h4>Todos los perfiles</h4>
+            <p>Puedes buscar comercial, administrativo, programador...</p>
+
+            <h4>En cuestión de horas</h4>
+            <p>Buscar trabajadores y encontrarlos es muy rápido</p>
+
+        </div>
+    
+        <button type="button" class="btn btn-outline-primary , button" routerLink="/registro-empresa"  routerLinkActive="active-link">Regístrate</button>
+
+  </div>
+    </div>
 </div>
-</div>
+
