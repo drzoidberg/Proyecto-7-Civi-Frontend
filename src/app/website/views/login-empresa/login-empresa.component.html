@@ -1,6 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md box pt-5">
+            <div class="row">
+                <h2>Acceder como Empresa</h2>
+            </div>
+            <form class="formulario" (submit)='conectarEmpresa()' #form="ngForm">
+                <div class="row">
+                    <span>Email</span>
+                </div>
+                <div class="row">
+                    <input class="form-control" type="text" matInput [(ngModel)]="empresa.email" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="row mt-2">
+                    <span>Contraseña</span>
+                </div>
+                <div class="row">
+                    <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary my-3 mr-sm-3">INICIA SESIÓN</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md box pt-5">
+            <div class="row">
+                <h2>¿Eres nuevo/a?</h2>
+            </div>
+            <div class="row">
+                <h4>La mayor bolsa de CVs</h4>
+            </div>
+            <div class="row">
+                <h4>Todos los perfiles</h4>
+                <p>Puedes buscar comercial, administrativo, programador...</p>
+            </div>
+            <div class="row">
+                <h4>En cuestión de horas</h4>
+                <p>Buscar trabajadores y encontrarlos es muy rápido</p>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-outline-primary button" routerLink="/registro-empresa"  routerLinkActive="active-link">Regístrate</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
+<!--
 <div class="vistaLogin">
     <div class="container">
 
@@ -10,34 +54,34 @@
                 <h2>Acceder como Empresa</h2>
 
             </div>
-          
+
             <form class="formulario" (submit)='conectarEmpresa()' #form="ngForm">
                 <div class="cajaFormulario-titulo">
                     <p>Email</p>
                 <input class="form-control" type="text" matInput [(ngModel)]="empresa.email" [ngModelOptions]="{standalone: true}">
 
                 </div>
-                
+
                 <div class="cajaFormulario-titulo, cajaFormulario-contrasenia">
                     <p>Contraseña</p>
                     <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
-              
+
                </div>
-               
+
                 <button class="btn btn-primary , button">INICIA SESIÓN</button>
             </form>
-       
-       
+
+
         </div>
 
         <div class="cajaVacia"></div>
 
           <div class="col-md-5 cajaDerecha pt-4">
             <h2>¿Eres nuevo/a?</h2>
-      
+
         <div class="textoInformacion">
             <h4>La mayor bolsa de CVs</h4>
-            
+
 
             <h4>Todos los perfiles</h4>
             <p>Puedes buscar comercial, administrativo, programador...</p>
@@ -46,10 +90,10 @@
             <p>Buscar trabajadores y encontrarlos es muy rápido</p>
 
         </div>
-    
+
         <button type="button" class="btn btn-outline-primary , button" routerLink="/registro-empresa"  routerLinkActive="active-link">Regístrate</button>
 
   </div>
     </div>
-</div>
+</div> -->
 
