@@ -1,30 +1,66 @@
-<div>
-    <div *ngFor="let solicitud of solicitudes[0]" >
-        <p>{{solicitud.solicitudes_num_solicitud}}</p>
-        <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
-            <p>{{solicitud.solicitudes_estado}}</p>
+<div class="contenedor">
 
-        </div>
-        <div *ngIf= "solicitud.solicitudes_estado === 'Pendiente'">
-            <p>{{solicitud.solicitudes_estado}}</p>
-            <button (click)="cambiarSolicitud('Aceptado', solicitud.solicitudes_num_solicitud)">
-                Aceptar
-            </button>
-            <button (click)="cambiarSolicitud('Rechazado', solicitud.solicitudes_num_solicitud)">
-                Rechazar
-            </button>
 
+
+    <div>
+        <div class="container titulos">
+            <div class="row">
+                <h5 class=" col-md-1">Solicitud</h5>
+                <h5 class=" col-md-1">Nombre</h5>
+                <h5 class=" col-md-1">Apellido</h5>
+                <h5 class=" col-md-1">Título</h5>
+                <h5 class=" col-md-3">Descripción</h5>
+                <h5 class=" col-md-1">Estado</h5>
+            </div>
         </div>
-        <p>{{solicitud.oferta_trabajos_titulo}}</p>
-        <p>{{solicitud.usuarios_nombre}}</p>
-        <p>{{solicitud.usuarios_apellido}}</p>
-        <p>{{solicitud.usuarios_descripcion}}</p>  
-        <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+        
+        <div class="container" *ngFor="let solicitud of solicitudes[0]" >
+                
+                 <div class="row">
+                    <div class=" col-md-1">
+                    <p>{{solicitud.solicitudes_num_solicitud}}</p>
+                    </div>
+                    <div class=" col-md-1">
+                    <p>{{solicitud.usuarios_nombre}}</p>
+                    </div>
+                    <div class=" col-md-1">
+                        <p>{{solicitud.usuarios_apellido}}</p>
+                        </div>
+                        <div class=" col-md-1">
+                        <p>{{solicitud.oferta_trabajos_titulo}}</p>
+                        </div>
+                        
+                        <div class=" col-md-3">
+                        <p>{{solicitud.usuarios_descripcion}}</p>  
+                        </div>
+                        <div class=" col-md-3">
+    
+                    
+                        <div class="cajaEstado" *ngIf= "solicitud.solicitudes_estado === 'Pendiente'">
+                        
+    
+                         
+                            <p>{{solicitud.solicitudes_estado}}</p>
+                            <button class="btn btn-outline-success" (click)="cambiarSolicitud('Aceptado', solicitud.solicitudes_num_solicitud)">
+                            Aceptar
+                        </button>
+                        <button class="btn btn-outline-danger" (click)="cambiarSolicitud('Rechazado', solicitud.solicitudes_num_solicitud)">
+                            Rechazar
+                        </button>
+                        </div>
+                  
+                  
+                    <div class="cajaEstado" *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+                        <p>{{solicitud.solicitudes_estado}}</p>
+                        
+                        <button class="btn btn-outline-danger boton" (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
+                    </div>
+                </div>
+                 </div>
+         
             
-            <button (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
         </div>
-
     </div>
-</div>
-
-
+    
+    
+    </div>

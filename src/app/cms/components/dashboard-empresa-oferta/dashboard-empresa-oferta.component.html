@@ -1,14 +1,46 @@
 
 
-<div>
-    <div *ngFor="let oferta of ofertas" >
-                <p>{{oferta.id_trabajos}}</p>
-            <p>{{oferta.titulo}}</p>
-            <p>{{oferta.descripcion_oferta}}</p>
-            <p>{{oferta.popularidad}}</p>
-            <p>{{oferta.fecha_publicacion}}</p>
-            <button (click)="borrarOferta(oferta.id_trabajos)">X</button>
+
+<div class="contenedor">
+    <div>
+        <div class="container titulos">
+            <div class="row">
+                <h5 class=" col-md-1">Oferta</h5>
+                <h5 class=" col-md-3">Título</h5>
+                <h5 class=" col-md-1">Popula<br/>ridad</h5>
+                <h5 class=" col-md-3">Descripción</h5>
+                <h5 class=" col-md-2">Fecha publicación</h5>
+            </div>
+        </div>
+        
+        <div class="container" *ngFor="let oferta of ofertas" >
+                
+                 <div class="row">
+                    <div class=" col-md-1">
+                        <p>{{oferta.id_trabajos}}</p>
+                    </div>
+                    <div class=" col-md-3">
+                        <p>{{oferta.titulo}}</p>
+                    </div>
+                    <div class=" col-md-1">
+                        <p>{{oferta.popularidad}}</p>
+                    </div>
+                    <div class=" col-md-3">
+                        <p>{{oferta.descripcion_oferta}}</p>
+                        </div>
+                        
+                        <div class=" col-md-2">
+                            <p>{{oferta.fecha_publicacion}}</p>
+                        </div>
+                        <div class=" col-md-2">
+    
+                    
+                            <button class="btn btn-outline-danger boton" (click)="borrarOferta(oferta.id_trabajos)">X</button>
+                  
+                   
+                 </div>   
+        </div>
     </div>
-</div>
-
-
+    
+    
+    </div>
