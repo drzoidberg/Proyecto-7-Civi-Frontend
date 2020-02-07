@@ -1,4 +1,55 @@
-<form (submit)='crearEmpresa()' #form="ngForm">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center">Registro de Empresa</h2>
+                </div>
+            </div>
+            <form (submit)='crearEmpresa()' #form="ngForm">
+                <div class="row mb-3">
+                    <span>Nombre de la empresa</span>
+                    <input class="form-control" type="text" matInput [(ngModel)]="empresa.nombre_empresa" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="row mb-3">
+                    <span>Tipo de trabajo</span>
+                    <input class="form-control" type="text" matInput [(ngModel)]="empresa.id_categoria" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row mb-3 mr-1">
+                            <span>NIF</span>
+                            <input class="form-control" type="text" matInput [(ngModel)]="empresa.nif" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row mb-3">
+                            <span>Email</span>
+                            <input class="form-control" type="text" matInput [(ngModel)]="empresa.email" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <span>Contraseña</span>
+                    <input class="form-control" type="password" matInput [(ngModel)]="empresa.contrasenia" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="row mb-3">
+                    <span>Descripción</span>
+                    <textarea class="form-control" type="text" matInput [(ngModel)]="empresa.descripcion_empresa" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+
+                <div class="row mb-3">
+                    <button class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <form (submit)='crearEmpresa()' #form="ngForm">
     <p>NIF</p>
     <input class="form-control" type="text" matInput [(ngModel)]="empresa.nif" [ngModelOptions]="{standalone: true}">
     <p>Email</p>
@@ -14,6 +65,6 @@
     <input class="form-control" type="text" matInput [(ngModel)]="empresa.nombre_empresa" [ngModelOptions]="{standalone: true}">
     <p>Tipo Trabajo</p>
     <input class="form-control" type="text" matInput [(ngModel)]="empresa.id_categoria" [ngModelOptions]="{standalone: true}">
-    
+
    <button class="btn btn-primary">Enviar</button>
-</form>
+</form> -->
