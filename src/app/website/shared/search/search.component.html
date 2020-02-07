@@ -1,5 +1,33 @@
-<form (submit)='buscarCiudad()' #form="ngForm">
-    <p>Buscar...</p>
-    <!-- <input class="form-control" type="text" matInput [(ngModel)]="oferta.ciudad" [ngModelOptions]="{standalone: true}"> -->
-    <button>Buscar</button>
-   </form>
+<!-- <div class="container">
+    <div class="row">
+        .col-md
+    </div>
+    <form (submit)='buscarCiudad()' #form="ngForm">
+        <p>Buscar...</p> -->
+        <!-- <input class="form-control" type="text" matInput [(ngModel)]="oferta.ciudad" [ngModelOptions]="{standalone: true}"> -->
+        <!-- <button>Buscar</button>
+    </form>
+</div> -->
+
+<!-- search-field -->
+<div class="container-search-field">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form (submit)='buscarCiudad()' #form="ngForm">
+                    <div class="form-row">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Buscar ofertas de..">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="en..">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-warning btn-block">BUSCAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
