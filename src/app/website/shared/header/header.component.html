@@ -2,7 +2,8 @@
     <!-- header empresa -->
     <nav *ngIf="Empresa" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
         <a routerLink="/home" routerLinkActive="active-link">
-            <img src="" alt="Foto de logo" />
+            <!-- <img src="" alt="Foto de logo" /> -->
+            <p style="margin-right:20px">Logo</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +47,8 @@
     <!-- header usuario -->
     <nav *ngIf="Usuario" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
         <a routerLink="/home" routerLinkActive="active-link">
-            <img src="" alt="Foto de logo" />
+            <!-- <img src="" alt="Foto de logo" /> -->
+            <p style="margin-right:20px">Logo</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +86,8 @@
     <!-- header anonimo -->
     <nav *ngIf="!Usuario && !Empresa" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
         <a routerLink="/home" routerLinkActive="active-link">
-            <img src="" alt="Foto de logo" />
+            <!-- <img src="" alt="Foto de logo" /> -->
+            <p style="margin-right:20px">Logo</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
