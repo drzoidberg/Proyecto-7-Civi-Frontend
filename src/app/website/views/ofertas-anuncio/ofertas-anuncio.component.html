@@ -1,4 +1,20 @@
-<div>
+<!-- {{solicitudes}} -->
+<app-filter-form></app-filter-form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 mt-5" *ngFor="let oferta of ofertaAnuncio">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{oferta.titulo}}</h5>
+                    <p class="card-text">{{oferta.nombre}}</p>
+                    <a href="#" class="btn btn-primary" *ngIf=Usuario>Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div>
     {{solicitudes}}
     <div>
         <app-filter-form></app-filter-form>
@@ -12,6 +28,6 @@
        </p>
 
            <button *ngIf=Usuario>solicitar</button>
-       
-    </div>  
-</div>
+
+    </div>
+</div> -->
