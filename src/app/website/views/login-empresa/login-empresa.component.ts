@@ -21,6 +21,7 @@ export class LoginEmpresaComponent implements OnInit {
     this.website.loginEmpresa(this.empresa).subscribe(res=> 
       // console.log(res))
       {
+        console.log('aa')
         let mensaje= 'Contrasenia o correo invalido';
         if((res !== mensaje) ){
         localStorage.setItem('Empresa', res), setTimeout(() => {

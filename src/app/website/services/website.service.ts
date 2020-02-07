@@ -43,13 +43,13 @@ export class WebsiteService {
 
   logoutUsuario(Usuario):Observable<any>{
     let desconectarUsuario=JSON.parse(Usuario);
-     console.log(desconectarUsuario)
+     console.log(desconectarUsuario[0].remember_token)
    //  let prueba={ responseType:'text' as 'json', 'Authorization':desconectarUsuario[0].remember_token }
      // console.log(Usuario)
      const httpOptions = {
-       headers: new HttpHeaders({  'Authorization':Usuario[0].remember_token })
+       headers: new HttpHeaders({  'Authorization': desconectarUsuario[0].remember_token })
      };
-     return this.http.post('http://localhost:8000/usuario/desconectarusuario', desconectarUsuario[0] , {responseType:'text' as 'json'});
+     return this.http.post('http://localhost:8000/usuario/desconectarusuario', desconectarUsuario[0]);
  
    }
 

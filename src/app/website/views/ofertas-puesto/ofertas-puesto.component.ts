@@ -11,6 +11,7 @@ export class OfertasPuestoComponent implements OnInit {
   oferta={
     oferta:''
   }
+  Usuario=localStorage.getItem('Usuario')
   ofertaTrabajo:Array<Filtros>
   constructor(private website:WebsiteService) { }
 

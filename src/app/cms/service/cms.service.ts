@@ -12,7 +12,7 @@ export class CmsService {
 
 
   cambiarPerfilUsuario(UsuarioPerfil:Perfilusuario):Observable<any>{
-    console.log('he entrado al cms')
+    console.log(UsuarioPerfil)
      const httpOptions = {
        headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':UsuarioPerfil.remember_token, 'responseType':'text' as 'json' })
      };

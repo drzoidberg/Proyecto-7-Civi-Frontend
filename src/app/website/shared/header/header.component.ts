@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   desconectarUsuario(){
     console.log('Hola')
     this.website.logoutUsuario(this.Usuario).subscribe(res =>  {
+      console.log('Hola');
       console.log(res),
       localStorage.removeItem('Usuario'), setTimeout(() => {
     location.reload(true);
