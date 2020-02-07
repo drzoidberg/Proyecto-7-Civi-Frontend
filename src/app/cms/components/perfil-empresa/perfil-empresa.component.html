@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <p>Foto</p>
    <img src={{Empresa[0].foto}}>
     <p>Nombre</p>
@@ -15,18 +15,31 @@
     <p>{{Empresa[0].Telefono}}</p>
     <p>Fecha Nacimiento</p>
     <p>{{Empresa[0].fecha_nacimiento}}</p>
-</div>
+</div> -->
 
-<div>
+<div class="vistaPerfil">
+    <div class="container">
     <form (submit)='cambiarPerfilUsuario()'>
+        <div class="row">
+        <div class=" col-md-6">
         <label>Foto</label>
         <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}" >
+      
         <label>NIF</label>
         <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nif" [ngModelOptions]="{standalone: true}" >
+      </div>
+      <div class=" col-md-6">
         <label>Nombre</label>
         <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nombre_empresa" [ngModelOptions]="{standalone: true}" >
+      
         <label>Descripcion</label>
-        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.descripcion_empresa" [ngModelOptions]="{standalone: true}" >
-        <button class="btn btn-primary">Enviar</button>
+        <input class="form-control descripcion" type="text" [(ngModel)]="nuevoUsuario.descripcion_empresa" [ngModelOptions]="{standalone: true}" >
+      </div>
+      <div class="boton">
+        <button class="btn btn-primary">Modificar</button>
+
+    </div>
+        </div>
    </form>
+   <div>
 </div>

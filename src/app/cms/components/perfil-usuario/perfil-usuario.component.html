@@ -1,5 +1,5 @@
 <div>
-    <div>
+    <!-- <div>
         <p>Foto</p>
        <img src={{Usuario[0].foto}}>
         <p>Nombre</p>
@@ -16,28 +16,46 @@
         <p>{{Usuario[0].Telefono}}</p>
         <p>Fecha Nacimiento</p>
         <p>{{Usuario[0].fecha_nacimiento}}</p>
-    </div>
+    </div> -->
 
-    <div>
-        <form (submit)='cambiarPerfilUsuario()'>
+    <div class="vistaPerfil">
+        <div class="container">
+
+
+
+            <form class="formulario" (submit)='cambiarPerfilUsuario()'>
+        <div class="row">
+            <div class=" col-md-6">
+
+            
             <label>Nombre</label>
             <input class="form-control" name="nombre" type="text" [(ngModel)]="nuevoUsuario.nombre_usuario" [ngModelOptions]="{standalone: true}" >
             <label>Apellido</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.apellido" [ngModelOptions]="{standalone: true}" >
             <label>Email</label>
             <p>{{Usuario[0].email}}</p>
-            <label>dni</label>
+            <label>DNI</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.dni" [ngModelOptions]="{standalone: true}" >
-            <label>Descripcion</label>
+            </div>  
+            <div class=" col-md-6">
+
+            
+            <label>Descripción</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.descripcion" [ngModelOptions]="{standalone: true}" >
-            <label>Telefono</label>
+            <label>Teléfono</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.telefono" [ngModelOptions]="{standalone: true}" >
             <label>Foto</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}" >
             <label>Fecha Nacimiento</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}" >
-            <button class="btn btn-primary">Enviar</button>
+           </div>
+        </div>
+        <div class="boton">
+            <button class="btn btn-primary">Modificar</button>
+
+        </div>
        </form>
-    </div>
     
-    </div>
+</div>
+        </div>  
+   
