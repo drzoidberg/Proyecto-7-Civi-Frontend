@@ -16,8 +16,16 @@ export class OfertasPuestoComponent implements OnInit {
   constructor(private website:WebsiteService) { }
 
   buscarPuesto(){
-    this.website.filtroPuesto(this.oferta.oferta).subscribe(res=>this.ofertaTrabajo= JSON.parse(res));
+    // console.log('hola')
+    this.website.filtroPuesto(this.oferta.oferta).subscribe(res=>this.ofertaTrabajo=JSON.parse(res));
+    // console.log(this.ofertaTrabajo)
   }
+
+  solicitarOferta(num){
+    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+    
+  }
+
   ngOnInit() {
   }
 
