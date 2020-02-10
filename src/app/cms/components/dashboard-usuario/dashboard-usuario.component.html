@@ -1,23 +1,54 @@
-<div>
-    <div *ngFor="let solicitud of solicitudes[0]" >
-        <p>{{solicitud.solicitudes_num_solicitud}}</p>
-        <p>{{solicitud.oferta_trabajos_titulo}}</p>
-        <p>{{solicitud.oferta_trabajos_titulo}}</p>
-        <p>{{solicitud.solicitudes_estado}}</p>
-        <p>{{solicitud.oferta_trabajos_fecha_publicacion}}</p>
 
-      
-        <div *ngIf= "solicitud.solicitudes_estado === 'Pendiente'">
-          
-            <button (click)="rechazarSolicitud(solicitud.solicitudes_num_solicitud)">
-                Cancelar
-            </button>
 
+
+<div class="contenedor">
+    <div>
+        <div class="container titulos">
+            <div class="row">
+                <h5 class=" col-md-1">Solicitud</h5>
+                <h5 class=" col-md-3">Título</h5>
+                <h5 class=" col-md-3">Descripción</h5>
+                <h5 class=" col-md-1">Estado</h5>
+                <h5 class=" col-md-3">Fecha publicación</h5>
+            </div>
         </div>
-        <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+        
+        <div class="container" *ngFor="let solicitud of solicitudes[0]" >
+                
+                 <div class="row">
+                    <div class=" col-md-1">
+                         <p>{{solicitud.solicitudes_num_solicitud}}</p>
+                    </div>
+                    <div class=" col-md-3">
+                     <p>{{solicitud.oferta_trabajos_titulo}}</p>
+                    </div>
+                    <div class=" col-md-3">
+                        <p>{{solicitud.oferta_trabajos_descripcion}}</p>
+                    </div>
+                       <div class=" col-md-1">
+                       <p>{{solicitud.solicitudes_estado}}</p>
+                       </div>
+                        
+                        <div class=" col-md-2">
+                           <p>{{solicitud.oferta_trabajos_fecha_publicacion}}</p>
+                        </div>
+                        <div class=" col-md-2">
             
-            <button (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
-        </div>
+                            
+                                <div *ngIf= "solicitud.solicitudes_estado === 'Pendiente'">
+                
+                    <button class="btn btn-outline-danger boton" (click)="rechazarSolicitud(solicitud.solicitudes_num_solicitud)">
+                        Cancelar
+                    </button>
 
+                </div>
+                <div *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+                    
+                    <button class="btn btn-outline-danger boton" (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
+                </div>
+                 </div>   
+        </div>
     </div>
-</div>
+    
+    
+    </div>

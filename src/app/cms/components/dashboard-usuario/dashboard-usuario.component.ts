@@ -22,7 +22,9 @@ export class DashboardUsuarioComponent implements OnInit {
     this.cms.borrarSolicitudUsuario(num, this.Usuario).subscribe(res => {console.log(res), location.reload(true)});
   }
   ngOnInit() {
+    console.log('He arrancado')
     this.cms.VerSolicitudesUsuario(this.Usuario).subscribe(res => this.solicitudes.push(res));
+    console.log(this.solicitudes)
   }
 
 }
