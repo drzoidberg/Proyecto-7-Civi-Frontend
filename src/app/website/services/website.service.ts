@@ -62,6 +62,7 @@ export class WebsiteService {
       id_oferta_trabajo:num,
       id_usuario:desconectarUsuario[0].id
     }
+    console.log(solicitud)
     //  console.log(desconectarUsuario[0].remember_token)
   
      const httpOptions = {

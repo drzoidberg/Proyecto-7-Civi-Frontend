@@ -16,7 +16,6 @@ Usuario=localStorage.getItem('Usuario')
     
   solicitarOferta(num){
     this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
-    
   }
 
 

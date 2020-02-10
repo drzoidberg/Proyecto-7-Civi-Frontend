@@ -5,7 +5,7 @@
             <form (submit)='buscarCiudad()' #form="ngForm">
                 <span>Buscar por ciudad</span>
                 <input class="form-control" type="text" matInput [(ngModel)]="oferta.ciudad" [ngModelOptions]="{standalone: true}">
-                <button type="submit">Buscar</button>
+                <button class="btn btn-primary">Buscar</button>
             </form>
         </div>
 <div class="container">
@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{oferta.titulo}}</h5>
                     <p class="card-text">{{oferta.nombre}}</p>
-                    <a href="#" class="btn btn-primary" *ngIf=Usuario>Solicitar</a>
+                    <button  class="btn btn-primary" (click)="solicitarOferta(oferta.id)" *ngIf=Usuario >Solicitar</button>
                 </div>
             </div>
         </div>
