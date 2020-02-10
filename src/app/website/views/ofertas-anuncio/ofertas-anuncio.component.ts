@@ -14,7 +14,11 @@ ofertaAnuncio:Array<Filtros>
 Usuario=localStorage.getItem('Usuario')
   constructor(private website:WebsiteService, private cms:CmsService) {}
     
- 
+  solicitarOferta(num){
+    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+    
+  }
+
 
 
   ngOnInit() {
