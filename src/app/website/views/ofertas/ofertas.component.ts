@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from '../../services/website.service';
 import { Filtros } from 'src/app/models/filtros.model';
+import { log } from 'util';
 
 @Component({
   selector: 'app-ofertas',
@@ -12,6 +13,11 @@ export class OfertasComponent implements OnInit {
   Usuario=localStorage.getItem('Usuario')
   constructor(private website:WebsiteService) { }
 
+  solicitarOferta(num){
+    console.log(num);
+    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+    
+  }
   ngOnInit() {
     this.website.todasOfertas().subscribe(res=> this.todasOfertas= JSON.parse(res));
   }

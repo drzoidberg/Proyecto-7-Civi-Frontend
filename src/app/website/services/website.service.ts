@@ -55,13 +55,25 @@ export class WebsiteService {
 
 
 
+
+   solicitarOferta(num, Usuario):Observable<any>{
+    let desconectarUsuario=JSON.parse(Usuario);
+    let solicitud = {
+      id_oferta_trabajo:num,
+      id_usuario:desconectarUsuario[0].id
+    }
+     console.log(desconectarUsuario[0].remember_token)
+  
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization': desconectarUsuario[0].remember_token })
+     };
+     return this.http.post('http://localhost:8000/usuario/solicitaroferta', solicitud, httpOptions);
+    }
+
 // Filtros
   todasOfertas():Observable<any>{
-    return this.http.get('http://localhost:8000/ofertas/ofertas', {responseType:'text' as 'json'} );
-  
-  }
-  filtroPopularidad():Observable<any>{
     return this.http.get('http://localhost:8000/ofertas/ordenadas', {responseType:'text' as 'json'} );
+  
   }
   filtroCiudades():Observable<any>{
     return this.http.get('http://localhost:8000/ofertas/ciudades', {responseType:'text' as 'json'} );

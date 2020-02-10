@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{oferta.titulo}}</h5>
                     <p class="card-text">{{oferta.nombre}}</p>
-                    <a href="#" class="btn btn-primary" *ngIf=Usuario>Solicitar</a>
+                    <button href="#" class="btn btn-primary" (click)="solicitarOferta(oferta.id_oferta)" *ngIf=Usuario>Solicitar</button>
                 </div>
             </div>
         </div>

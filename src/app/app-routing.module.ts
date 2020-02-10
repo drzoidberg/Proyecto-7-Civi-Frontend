@@ -5,7 +5,6 @@ import { LoginUsuarioComponent } from './website/views/login-usuario/login-usuar
 import { HomeComponent } from './website/views/home/home.component';
 import { RegisterUsuarioComponent } from './website/views/register-usuario/register-usuario.component';
 import { RegisterEmpresaComponent } from './website/views/register-empresa/register-empresa.component';
-import { OfertasPopularidadComponent } from './website/views/ofertas-popularidad/ofertas-popularidad.component';
 import { OfertasCiudadesComponent } from './website/views/ofertas-ciudades/ofertas-ciudades.component';
 import { OfertasCiudadComponent } from './website/views/ofertas-ciudad/ofertas-ciudad.component';
 import { OfertasAnuncioComponent } from './website/views/ofertas-anuncio/ofertas-anuncio.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   {path:"registro-candidato", component:RegisterUsuarioComponent},
   {path:"registro-empresa", component:RegisterEmpresaComponent},
   {path:"ofertas", component:OfertasComponent},
-  {path:"filtro-popularidad", component:OfertasPopularidadComponent},
   {path:"filtro-ciudades", component:OfertasCiudadesComponent},
   {path:"filtro-ciudad", component:OfertasCiudadComponent},
   {path:"filtro-destacados", component:OfertasAnuncioComponent},

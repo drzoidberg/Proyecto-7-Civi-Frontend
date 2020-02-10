@@ -1,5 +1,14 @@
 <app-filter-form></app-filter-form>
 <div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <form (submit)='buscarCiudad()' #form="ngForm">
+                <span>Buscar por ciudad</span>
+                <input class="form-control" type="text" matInput [(ngModel)]="oferta.ciudad" [ngModelOptions]="{standalone: true}">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+<div class="container">
     <div class="row">
         <div class="col-sm-3 mt-5" *ngFor="let oferta of ofertaCiudad">
             <div class="card">

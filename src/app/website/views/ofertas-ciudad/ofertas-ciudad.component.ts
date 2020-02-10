@@ -17,6 +17,7 @@ ofertaCiudad:Array<Filtros>
   constructor(private website:WebsiteService) { }
   
   buscarCiudad(){
+    
     this.website.filtroCiudad(this.oferta.ciudad).subscribe(res=>this.ofertaCiudad= JSON.parse(res));
   }
   ngOnInit() {

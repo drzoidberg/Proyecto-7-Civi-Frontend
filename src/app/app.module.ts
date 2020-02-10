@@ -20,7 +20,6 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { FilterFormComponent } from './website/shared/filter-form/filter-form.component';
 import { FooterComponent } from './website/shared/footer/footer.component';
 import { HeaderComponent } from './website/shared/header/header.component';
-import { OfertasPopularidadComponent } from './website/views/ofertas-popularidad/ofertas-popularidad.component';
 import { PredefinedQueryComponent } from './website/views/predefined-query/predefined-query.component';
 import { PredefinedQueryListComponent } from './website/views/predefined-query-list/predefined-query-list.component';
 import { SearchComponent } from './website/shared/search/search.component';
@@ -47,7 +46,6 @@ import { OfertasComponent } from './website/views/ofertas/ofertas.component';
     FilterFormComponent,
     FooterComponent,
     HeaderComponent,
-    OfertasPopularidadComponent,
     PredefinedQueryComponent,
     PredefinedQueryListComponent,
     SearchComponent,
