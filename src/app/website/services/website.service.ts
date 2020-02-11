@@ -62,7 +62,7 @@ export class WebsiteService {
       id_oferta_trabajo:num,
       id_usuario:desconectarUsuario[0].id
     }
-     console.log(desconectarUsuario[0].remember_token)
+    //  console.log(desconectarUsuario[0].remember_token)
   
      const httpOptions = {
        headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization': desconectarUsuario[0].remember_token })

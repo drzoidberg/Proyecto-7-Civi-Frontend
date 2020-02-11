@@ -5,11 +5,12 @@
             <form (submit)='buscarPuesto()' #form="ngForm">
                 <span>Busca oferta</span>
                 <input class="form-control" type="text" matInput [(ngModel)]="oferta.oferta" [ngModelOptions]="{standalone: true}">
+                <div class="col-md-1 mt-4">
+                    <button class="btn btn-primary">Buscar</button>
+                </div>
             </form>
         </div>
-        <div class="col-md-1 mt-4">
-            <button class="btn btn-primary">Buscar</button>
-        </div>
+       
     </div>
     <div class="row">
         <div class="col-sm-3 mt-5" *ngFor="let oferta of ofertaTrabajo">
@@ -17,7 +18,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{oferta.titulo}}</h5>
                     <p class="card-text">{{oferta.nombre}}</p>
-                    <a href="#" class="btn btn-primary" *ngIf=Usuario>Solicitar</a>
+                    <button class="btn btn-primary" (click)="solicitarOferta(oferta.id)" *ngIf=Usuario>Solicitar</button>
                 </div>
             </div>
         </div>
