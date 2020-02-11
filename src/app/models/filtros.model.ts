@@ -11,5 +11,5 @@ export interface Filtros{
     "visible_usuario": number,
     "visible_empresa": number,
     "salario": number,
-    "nombre": "string"
+    "nombre": string
 }

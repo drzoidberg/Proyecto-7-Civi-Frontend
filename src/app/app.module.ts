@@ -1,13 +1,16 @@
 // modulos
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
 
 // componentes
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginEmpresaComponent } from './website/views/login-empresa/login-empresa.component';
 import { LoginUsuarioComponent } from './website/views/login-usuario/login-usuario.component';
 import { RegisterUsuarioComponent } from './website/views/register-usuario/register-usuario.component';
@@ -30,6 +33,10 @@ import { OfertasCiudadesComponent } from './website/views/ofertas-ciudades/ofert
 import { OfertasAnuncioComponent } from './website/views/ofertas-anuncio/ofertas-anuncio.component';
 import { OfertasPuestoComponent } from './website/views/ofertas-puesto/ofertas-puesto.component';
 import { OfertasComponent } from './website/views/ofertas/ofertas.component';
+
+
+registerLocaleData(localeEs, 'es');
+
 
 @NgModule({
   declarations: [
@@ -59,12 +66,17 @@ import { OfertasComponent } from './website/views/ofertas/ofertas.component';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es' }
+  ],
   bootstrap: [AppComponent]
+
+
 })
 export class AppModule { }
