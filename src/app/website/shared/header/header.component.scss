@@ -17,6 +17,9 @@
 
 .container-fluid {
     position: relative;
+    background: #282973;
+    -webkit-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
 .header {
@@ -37,4 +40,47 @@
 .info-card {
     font-size: 25px;
     margin-bottom: 10px;
+}
+
+// .btn-buscar-empleo {
+//     font-weight: bold;
+//     background-color: #d0f2ff;
+//     border-color: transparent!important;
+//     color: #234441!important;
+// }
+
+.btn-buscar-empleo {
+    font-weight: bold;
+    background-color: #FF9800;
+    border-color: transparent!important;
+    color: #FFF!important;
+}
+
+
+.btn-buscar-empleo:hover {
+    background-color: white;
+    border-color: transparent!important;
+    color: #FF9800!important;
+}
+
+.btn-login {
+    font-weight: bold;
+    color: #eaffff!important;
+    background-color: transparent!important;
+    border: 2px solid #FFF;
+}
+
+.btn-login:hover {
+    font-weight: bold;
+    color: #212529!important;
+    background-color: #FFF!important;
+    border-color: transparent!important;
+}
+
+.btn-logged {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.btn-logged:hover {
+    color: rgba(255, 255, 255, 1);
 }

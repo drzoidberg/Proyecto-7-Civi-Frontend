@@ -5,39 +5,39 @@
             <!-- <img src="" alt="Foto de logo" /> -->
             <p style="margin-right:20px">Logo</p>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
-        <!-- buttons-right -->
+        <!-- buttons-left -->
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-buscar-empleo my-2 mr-sm-3"
                         routerLink="/ofertas"
                         routerLinkActive="active-link">BUSCAR EMPLEO</a>
+
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-logged my-2 mr-sm-2 text-right"
                         routerLink="/ver-perfil-empresa"
                         value="algo"
-                        routerLinkActive="active-link">Perfil Empresa</a>
+                        routerLinkActive="active-link">Perfil de Empresa</a>
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-logged my-2 mr-sm-3 text-right"
                         routerLink="/administrar-solicitud-empresa"
-                        routerLinkActive="active-link">Panel solicitudes</a>
+                        routerLinkActive="active-link">Panel de Solicitudes</a>
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-logged my-2 mr-sm-3"
                         routerLink="/administrar-ofertas-empresa"
                         value="algo"
                         routerLinkActive="active-link">Administrar Ofertas</a>
-
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
                 <button
-                    class="btn btn-outline-primary my-2 mr-sm-2"
+                    class="btn btn-login my-2 mr-sm-3"
                     (click)="desconectarEmpresa()">Desconectar</button>
             </form>
         </div>
@@ -50,33 +50,33 @@
             <!-- <img src="" alt="Foto de logo" /> -->
             <p style="margin-right:20px">Logo</p>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
         <!-- buttons-right -->
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-buscar-empleo my-2 mr-sm-3 text-right"
                         routerLink="/ofertas"
                         routerLinkActive="active-link">BUSCAR EMPLEO</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-logged my-2 mr-sm-2 text-right"
                         routerLink="ver-perfil-candidato"
                         value="algo"
                         routerLinkActive="active-link">Perfil</a>
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-logged my-2 mr-sm-3 text-right"
                         routerLink="/administrar-solicitud-candidato"
-                        routerLinkActive="active-link">Panel solicitudes</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
+                        routerLinkActive="active-link">Mis solicitudes</a>
                 <button
-                    class="btn btn-outline-primary my-2 mr-sm-2"
+                    class="btn btn-login my-2 mr-sm-3"
                     (click)="desconectarUsuario()">Desconectar</button>
             </form>
         </div>
@@ -89,17 +89,17 @@
             <!-- <img src="" alt="Foto de logo" /> -->
             <p style="margin-right:20px">Logo</p>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
         <!-- buttons-right -->
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a
-                        class="btn btn-warning my-2 mr-sm-2"
+                        class="btn btn-buscar-empleo my-2 mr-sm-3"
                         routerLink="/ofertas"
                         routerLinkActive="active-link">BUSCAR EMPLEO</a>
                 </li>
@@ -107,12 +107,12 @@
             <form class="form-inline my-2 my-lg-0">
                 <a
                     routerLink="/login-empresa" routerLinkActive="active-link"
-                    class="btn btn-outline-dark my-2 mr-sm-2"
-                    type="submit">ACCESO EMPRESAS</a>
+                    class="btn btn-login my-2 mr-sm-3 text-right"
+                    type="submit">Acceso empresas</a>
                 <a
                     routerLink="/login-candidato" value="algo" routerLinkActive="active-link"
-                    class="btn btn-outline-primary my-2 mr-sm-2"
-                    type="submit">ACCESO CANDIDATOS</a>
+                    class="btn btn-login my-2 mr-sm-3 text-right"
+                    type="submit">Acceso candidatos</a>
             </form>
         </div>
     </nav>
