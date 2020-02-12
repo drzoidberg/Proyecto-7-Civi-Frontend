@@ -4,6 +4,7 @@ import { Login } from 'src/app/models/login.model';
 import { WebsiteService } from '../../services/website.service';
 import { Router } from '@angular/router';
 import { isArray, isObject } from 'util';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login-empresa',

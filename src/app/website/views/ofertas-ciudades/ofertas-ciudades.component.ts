@@ -12,6 +12,11 @@ export class OfertasCiudadesComponent implements OnInit {
   Usuario=localStorage.getItem('Usuario')
   constructor(private website:WebsiteService) { }
 
+
+  solicitarOferta(num){
+    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+  }
+  
   ngOnInit() {
     this.website.filtroCiudades().subscribe(res=> this.ofertaCiudades=  JSON.parse(res));
   }
