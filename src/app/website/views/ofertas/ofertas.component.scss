@@ -1,7 +1,7 @@
 .card {
     font-family: "Source Sans Pro", sans-serif;
     background: #FFFFFF;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
     border-radius: 6px;
     border: none;
     transition: all 0.05s;
@@ -16,7 +16,7 @@
 }
 
 .card:hover {
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.28);
 }
 
 .card-title {
@@ -83,4 +83,12 @@
 
 fa-icon {
   margin-right: .1rem
+}
+
+div[routerLink] {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
 }

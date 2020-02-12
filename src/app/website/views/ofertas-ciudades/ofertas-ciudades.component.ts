@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from '../../services/website.service';
 import { Filtros } from 'src/app/models/filtros.model';
+import {
+  faCalendarAlt,
+  faClock,
+  faMapMarkerAlt,
+  faBuilding
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-ofertas-ciudades',
@@ -10,6 +16,15 @@ import { Filtros } from 'src/app/models/filtros.model';
 export class OfertasCiudadesComponent implements OnInit {
   ofertaCiudades:Array<Filtros>
   Usuario=localStorage.getItem('Usuario')
+  faCalendarAlt = faCalendarAlt;
+  faClock = faClock;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faBuilding = faBuilding;
+
+  todasLasCiudadesImgPath = '../../../../assets/images/todas-las-ciudades.jpg';
+  ciudadImgPath = '../../../../assets/images/ciudad.jpg';
+  destacadosImgPath = '../../../../assets/images/destacados.jpg';
+  puestoTrabajoImgPath = '../../../../assets/images/puesto-trabajo.jpg';
   constructor(private website:WebsiteService) { }
 
   ngOnInit() {

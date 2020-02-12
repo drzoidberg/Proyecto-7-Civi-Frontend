@@ -1,4 +1,40 @@
-<app-filter-form></app-filter-form>
+<div class="container-predefined-query">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <p class="info-card">Búsquedas más frecuentes</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-ciudades" routerLinkActive="active-link" class="img-thumbnail text-center">
+                <img class="card-img" src={{todasLasCiudadesImgPath}}>
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Todas las ciudades</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-ciudad" routerLinkActive="active-link" class="img-thumbnail text-center">
+                <img class="card-img" src={{ciudadImgPath}} >
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Ciudad</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-destacados" routerLinkActive="active-link" class="img-thumbnail text-center">
+                    <img class="card-img" src={{destacadosImgPath}}>
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Destacados</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-puesto-trabajo" routerLinkActive="active-link" class="img-thumbnail text-center">
+                    <img class="card-img" src={{puestoTrabajoImgPath}}>
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Puesto de Trabajo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <app-filter-form></app-filter-form> -->
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-4">
@@ -10,9 +46,48 @@
                 </div>
             </form>
         </div>
-       
+
     </div>
-    <div class="row">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 mt-5" *ngFor="let oferta of ofertaTrabajo">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                              <fa-icon class="business-icon" [icon]="faBuilding"></fa-icon>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="card-title">{{oferta.titulo}}</h4>
+                                <span class="card-location">
+                                  <fa-icon class="location-icon" [icon]="faMapMarkerAlt"></fa-icon>
+                                  {{oferta.nombre}}
+                                </span>
+                                <div class="datetime-container">
+                                    <span class="card-date-publication">
+                                        <fa-icon [icon]="faCalendarAlt"></fa-icon>
+                                        {{oferta.fecha_publicacion | date: 'EEE dd/MM/yy'}}
+                                    </span>
+                                    <span class="card-time-publication">
+                                        <fa-icon [icon]="faClock"></fa-icon>
+                                        {{oferta.fecha_publicacion | date: 'HH:mm'}}
+                                    </span>
+                                </div>
+                                <div class="card-description">
+                                  {{oferta.descripcion_oferta}}
+                                </div>
+                                <button href="#" class="btn civi-btn-primary" *ngIf=Usuario>Solicitar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
         <div class="col-sm-3 mt-5" *ngFor="let oferta of ofertaTrabajo">
             <div class="card">
                 <div class="card-body">
@@ -22,7 +97,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 
