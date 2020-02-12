@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  logo = '../../../../assets/images/logo.png';
+
   constructor(private website:WebsiteService, private router:Router) { }
   Usuario = localStorage.getItem('Usuario')
   Empresa = localStorage.getItem('Empresa');

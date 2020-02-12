@@ -2,13 +2,8 @@
     <!-- header empresa -->
     <nav *ngIf="Empresa" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
         <a routerLink="/home" routerLinkActive="active-link">
-            <!-- <img src="" alt="Foto de logo" /> -->
-            <p style="margin-right:20px">Logo</p>
+            <img class="logo mr-4" src={{logo}} style="margin-right:20px">
         </a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
 
         <!-- buttons-left -->
         <div class="collapse navbar-collapse">
@@ -47,13 +42,8 @@
     <!-- header usuario -->
     <nav *ngIf="Usuario" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
         <a routerLink="/home" routerLinkActive="active-link">
-            <!-- <img src="" alt="Foto de logo" /> -->
-            <p style="margin-right:20px">Logo</p>
+            <img class="logo mr-4" src={{logo}} style="margin-right:20px">
         </a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
 
         <!-- buttons-right -->
         <div class="collapse navbar-collapse">
@@ -86,13 +76,8 @@
     <!-- header anonimo -->
     <nav *ngIf="!Usuario && !Empresa" [ngClass]="'cajaUsuario'" class="header navbar navbar-expand-md navbar-light bg-light">
         <a routerLink="/home" routerLinkActive="active-link">
-            <!-- <img src="" alt="Foto de logo" /> -->
-            <p style="margin-right:20px">Logo</p>
+            <img class="logo mr-4" src={{logo}} style="margin-right:20px">
         </a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
 
         <!-- buttons-right -->
         <div class="collapse navbar-collapse">
@@ -117,98 +102,7 @@
         </div>
     </nav>
     <!-- fin header anonimo -->
-
-
-
 </div>
-
-
-<!-- <div class="container">
-    <div class="row"> -->
-
-
-        <!-- <div  *ngIf="Empresa" [ngClass]="'cajaUsuario'" class="col-md-12 contenedor">
-            <ul>
-                <a routerLink="/home" routerLinkActive="active-link">
-                    <img src="" alt="Foto de logo" />
-                </a>
-
-            </ul>
-
-            <ul>
-                <a routerLink="/ofertas" routerLinkActive="active-link">Buscar empleo </a>
-            </ul>
-
-
-            <ul>
-                <a routerLink="/ver-perfil-empresa" value="algo" routerLinkActive="active-link">Perfil Empresa </a>
-
-            </ul>
-            <ul>
-                <a routerLink="/administrar-solicitud-empresa" value="algo" routerLinkActive="active-link">Panel solicitudes </a>
-
-            </ul>
-            <ul>
-                <a routerLink="/administrar-ofertas-empresa" value="algo" routerLinkActive="active-link">Administrar Ofertas </a>
-
-            </ul>
-            <ul>
-                <button (click)="desconectarEmpresa()">Desconectar</button>
-            </ul>
-          </div> -->
-
-          <!-- <div *ngIf="Usuario" [ngClass]="'cajaUsuario'" class="col-md-12 contenedor">
-            <ul>
-                <a routerLink="/home" routerLinkActive="active-link">
-                    <img src="" alt="Foto de logo" />
-                </a>
-
-            </ul>
-
-            <ul>
-                <a routerLink="/ofertas" routerLinkActive="active-link">Buscar empleo </a>
-            </ul>
-
-
-            <ul>
-                <a routerLink="/ver-perfil-candidato" value="algo" routerLinkActive="active-link">Perfil</a>
-
-            </ul>
-            <ul>
-                <a routerLink="/administrar-solicitud-candidato" value="algo" routerLinkActive="active-link">Panel solicitudes </a>
-
-            </ul>
-            <ul>
-                <button (click)="desconectarUsuario()">Desconectar</button>
-            </ul>
-
-          </div> -->
-
-
-
-          <!-- Anonimo -->
-          <!-- <div *ngIf="!Usuario && !Empresa" [ngClass]="'cajaUsuario'"class="col-md-12 contenedor">
-            <ul>
-                <a routerLink="/home" routerLinkActive="active-link">
-                    <img src="" alt="Foto de logo" />
-                </a>
-
-            </ul>
-
-            <ul>
-                <a routerLink="/ofertas" routerLinkActive="active-link">Buscar empleo </a>
-            </ul>
-
-
-            <ul>
-                <a routerLink="/login-empresa" routerLinkActive="active-link">Empresa </a>
-            </ul>
-            <ul>
-                <a routerLink="/login-candidato" value="algo" routerLinkActive="active-link">Candidato </a>
-
-            </ul>
-
-          </div> -->
 
 
 

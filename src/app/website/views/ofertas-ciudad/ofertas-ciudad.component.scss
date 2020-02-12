@@ -1,0 +1,94 @@
+.card {
+    font-family: "Source Sans Pro", sans-serif;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    border: none;
+    transition: all 0.05s;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding-right: 1.25rem;
+    padding-top: 0;
+}
+
+.card:hover {
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.28);
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top:2.5rem;
+    font-size: 22px;
+}
+
+.card-location {
+    color: #638db9;
+  font-size:.8rem;
+}
+
+.location-icon {
+  margin-right: .3rem;
+  color: #dc6161;
+}
+
+.business-icon {
+  color: #98b7d6;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  font-size: 3.6rem;
+}
+
+.civi-btn-primary {
+    background-color: #066da5;
+    color: white;
+    margin-top: 1rem;
+}
+
+.civi-btn-primary:hover {
+    background-color: #043956;
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-description {
+  margin-top: .5rem;
+}
+
+.datetime-container {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 13px;
+    color: #999;
+}
+
+.oferta-pic {
+  margin-top: 2.7rem;
+}
+
+.card-date-publication {
+    margin-right: .5em;
+}
+
+.col-md-3 {
+  margin-top: 2rem
+}
+
+fa-icon {
+  margin-right: .1rem
+}
+
+div[routerLink] {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}

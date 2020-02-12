@@ -1,4 +1,40 @@
-<app-filter-form></app-filter-form>
+<div class="container-predefined-query">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <p class="info-card">Búsquedas más frecuentes</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-ciudades" routerLinkActive="active-link" class="img-thumbnail text-center">
+                <img class="card-img" src={{todasLasCiudadesImgPath}}>
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Todas las ciudades</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-ciudad" routerLinkActive="active-link" class="img-thumbnail text-center">
+                <img class="card-img" src={{ciudadImgPath}} >
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Ciudad</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-destacados" routerLinkActive="active-link" class="img-thumbnail text-center">
+                    <img class="card-img" src={{destacadosImgPath}}>
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Destacados</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mt-0">
+                <div routerLink="/filtro-puesto-trabajo" routerLinkActive="active-link" class="img-thumbnail text-center">
+                    <img class="card-img" src={{puestoTrabajoImgPath}}>
+                    <p class="text-center text-black-50 bold mt-1 mb-1">Puesto de Trabajo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6 mt-5" *ngFor="let oferta of todasOfertas">
