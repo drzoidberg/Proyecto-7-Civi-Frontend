@@ -1,10 +1,33 @@
 .container-search-field .container {
-    background-color: white;
+    // background-color: white;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: 120px;
+    padding-bottom: 80px;
+    padding-top: 120px;
     position: relative;
     z-index: 2;
+}
+
+.bg {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(92, 92, 92, 0.45)
+      ),
+      url('../../../../assets/images/skyline-bg.jpg');
+  }
+
+.btn-buscar-empleo {
+    font-weight: bold;
+    background-color: #FF9800;
+    border-color: transparent!important;
+    color: #FFF!important;
+}
+
+
+.btn-buscar-empleo:hover {
+    background-color: white;
+    border-color: transparent!important;
+    color: #FF9800!important;
 }

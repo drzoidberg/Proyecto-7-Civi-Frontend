@@ -9,25 +9,30 @@
     </form>
 </div> -->
 
-<!-- search-field -->
-<div class="container-search-field">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form (submit)='buscarCiudad()' #form="ngForm">
-                    <div class="form-row">
-                        <div class="col-md-8">
-                            <input type="text" class="form-control" placeholder="Buscar ofertas de..">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" placeholder="en..">
-                        </div>
-                        <div class="col-md-2">
-                            <button type="button" class="btn btn-warning btn-block">BUSCAR</button>
-                        </div>
+<div class="bg">
+
+        <!-- search-field -->
+        <div class="container-search-field">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 mb-4">
+                        <h2 style="color: white">Civi te permite encontrar el trabajo adecuado</h2>
                     </div>
-                </form>
+                <div class="col-md-7">
+                    <form (submit)='buscarCiudad()' #form="ngForm">
+                        <div class="form-row">
+                            <div class="col-md-9 mb-2 mt-4">
+                                <input type="text" class="form-control" placeholder="Buscar ofertas de..">
+                            </div>
+
+                            <div class="col-md-3 mt-4">
+                                <button type="button" class="btn btn-buscar-empleo btn-block">BUSCAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
