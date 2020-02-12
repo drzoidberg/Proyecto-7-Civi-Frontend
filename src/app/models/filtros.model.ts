@@ -1,5 +1,5 @@
 export interface Filtros{
-  
+
     "titulo": string,
     "descripcion_oferta": string,
     "popularidad": number,
@@ -10,5 +10,6 @@ export interface Filtros{
     "fecha_publicacion": string,
     "visible_usuario": number,
     "visible_empresa": number,
-    "nombre": "string"
+    "salario": number,
+    "nombre": string
 }
