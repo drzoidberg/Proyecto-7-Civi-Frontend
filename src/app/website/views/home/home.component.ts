@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,13 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  // prueba(){
+  //   Swal.fire(
+  //     'Good job!',
+  //     'You clicked the button!',
+  //     'success'
+  //   )
+  // }
   ngOnInit() {
   }
 

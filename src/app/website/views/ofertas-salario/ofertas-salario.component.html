@@ -1,0 +1,10 @@
+<div class="col-sm-3 mt-5" *ngFor="let oferta of ofertaTrabajo">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{oferta.titulo}}</h5>
+            <p class="card-text">{{oferta.nombre}}</p>
+            <button class="btn btn-primary" (click)="solicitarOferta(oferta.id)" *ngIf=Usuario>Solicitar</button>
+        </div>
+        </div>
+        </div>
+        

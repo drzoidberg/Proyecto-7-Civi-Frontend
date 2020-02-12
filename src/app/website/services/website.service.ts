@@ -11,7 +11,10 @@ export class WebsiteService {
 
   
   constructor(private http:HttpClient ) { }
-   
+     // prueba(){
+  //   console.log('prueba')
+  //   Swal.fire('Any fool can use a computer')
+  // }
 //Usuarios y Empresas
   loginUsuario(usuario:Login):Observable<any>{
     return this.http.post('http://localhost:8000/usuario/login', usuario, {responseType:'text' as 'json'} );
@@ -62,6 +65,7 @@ export class WebsiteService {
       id_oferta_trabajo:num,
       id_usuario:desconectarUsuario[0].id
     }
+    console.log(solicitud)
     //  console.log(desconectarUsuario[0].remember_token)
   
      const httpOptions = {
@@ -87,6 +91,10 @@ export class WebsiteService {
     }
     filtroPuesto(puesto):Observable<any>{
       return this.http.get(`http://localhost:8000/ofertas/puesto/${puesto}`, {responseType:'text' as 'json'} );
+    }
+
+    filtroSalario(salario):Observable<any> {
+      return this.http.get(`http://localhost:8000/ofertas/salario/asc/${salario}`);
     }
   }
 

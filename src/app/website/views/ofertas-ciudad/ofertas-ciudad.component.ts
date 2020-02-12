@@ -35,6 +35,11 @@ faCalendarAlt = faCalendarAlt;
 
     this.website.filtroCiudad(this.oferta.ciudad).subscribe(res=>this.ofertaCiudad= JSON.parse(res));
   }
+  
+  solicitarOferta(num){
+    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+  }
+
   ngOnInit() {
 
   }

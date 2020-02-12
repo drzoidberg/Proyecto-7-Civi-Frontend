@@ -29,6 +29,9 @@ export class OfertasAnuncioComponent implements OnInit {
   puestoTrabajoImgPath = '../../../../assets/images/puesto-trabajo.jpg';
   constructor(private website:WebsiteService, private cms:CmsService) {}
 
+  solicitarOferta(num){
+    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+  }
 
 
 
