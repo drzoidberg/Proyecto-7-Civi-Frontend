@@ -15,6 +15,7 @@ import { PerfilEmpresaComponent } from './cms/components/perfil-empresa/perfil-e
 import { DashboardEmpresaSolicitudComponent } from './cms/components/dashboard-empresa-solicitud/dashboard-empresa-solicitud.component';
 import { DashboardEmpresaOfertaComponent } from './cms/components/dashboard-empresa-oferta/dashboard-empresa-oferta.component';
 import { DashboardUsuarioComponent } from './cms/components/dashboard-usuario/dashboard-usuario.component';
+import { OfertasSalarioComponent } from './website/views/ofertas-salario/ofertas-salario.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:"administrar-solicitud-empresa", component:DashboardEmpresaSolicitudComponent},
   {path:"administrar-ofertas-empresa", component:DashboardEmpresaOfertaComponent},
   {path:"administrar-solicitud-candidato", component:DashboardUsuarioComponent},
+  {path:"filtro-salario", component:OfertasSalarioComponent},
   
 ];
 

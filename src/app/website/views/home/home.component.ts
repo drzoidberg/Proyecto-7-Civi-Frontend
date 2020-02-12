@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   constructor() { }
-
+  
+  // prueba(){
+  //   Swal.fire(
+  //     'Good job!',
+  //     'You clicked the button!',
+  //     'success'
+  //   )
+  // }
   ngOnInit() {
   }
 
