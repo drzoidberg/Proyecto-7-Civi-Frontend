@@ -1,4 +1,4 @@
-<div>
+<!-- <div> -->
     <!-- <div>
         <p>Foto</p>
        <img src={{Usuario[0].foto}}>
@@ -18,7 +18,100 @@
         <p>{{Usuario[0].fecha_nacimiento}}</p>
     </div> -->
 
-    <div class="vistaPerfil">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mt-5">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-center">Modificar perfil de Candidato</h2>
+                    </div>
+                </div>
+                <form (submit)='cambiarPerfilUsuario()' #form="ngForm">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row mb-3 mr-1">
+                                <span>Nombre</span>
+                                <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.nombre_usuario" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row mb-3">
+                                <span>Apellido</span>
+                                <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.apellido" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row mb-3 mr-1">
+                                <span>Email</span>
+                                <input class="form-control" type="text" matInput [(ngModel)]="Usuario[0].email" [ngModelOptions]="{standalone: true}" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row mb-3">
+                                <span>Telefono</span>
+                                <input class="form-control" type="tel" matInput [(ngModel)]="nuevoUsuario.telefono" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- <div class="row mb-3">
+                        <span>Contraseña</span>
+                        <input class="form-control" type="password" matInput [(ngModel)]="nuevoUsuario.contrasenia" [ngModelOptions]="{standalone: true}">
+                    </div> -->
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row mb-3 mr-1">
+                                <span>DNI</span>
+                                <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.dni" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row mb-3">
+                                <span>Fecha De Nacimiento</span>
+                                <input class="form-control" type="Date" matInput [(ngModel)]="nuevoUsuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <span>Descripcion</span>
+                        <textarea class="form-control" id="" cols="30" rows="3" matInput [(ngModel)]="nuevoUsuario.descripcion" [ngModelOptions]="{standalone: true}"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <!-- <div class="col-md-7">
+                            <div class="row mb-3">
+                                <span>Direccion</span>
+                                <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.direccion" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- <div class="row mb-3">
+                        <span>Foto</span>
+                        <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}">
+                    </div> -->
+                    <div class="row mb-3">
+                        <button class="btn btn-primary">Modificar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="vistaPerfil">
         <div class="container">
 
 
@@ -27,7 +120,7 @@
         <div class="row">
             <div class=" col-md-6">
 
-            
+
             <label>Nombre</label>
             <input class="form-control" name="nombre" type="text" [(ngModel)]="nuevoUsuario.nombre_usuario" [ngModelOptions]="{standalone: true}" >
             <label>Apellido</label>
@@ -36,10 +129,10 @@
             <p>{{Usuario[0].email}}</p>
             <label>DNI</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.dni" [ngModelOptions]="{standalone: true}" >
-            </div>  
+            </div>
             <div class=" col-md-6">
 
-            
+
             <label>Descripción</label>
             <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.descripcion" [ngModelOptions]="{standalone: true}" >
             <label>Teléfono</label>
@@ -55,7 +148,7 @@
 
         </div>
        </form>
-    
+
 </div>
-        </div>  
-   
+        </div> -->
+
