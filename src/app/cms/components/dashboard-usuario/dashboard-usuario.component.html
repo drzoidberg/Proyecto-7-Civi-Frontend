@@ -26,6 +26,11 @@
                                 Cancelar
                             </button>
                         </div>
+                        <div class="cajaEstado" *ngIf= "solicitud.solicitudes_estado !== 'Pendiente'">
+                          
+                            
+                            <button class="btn btn-outline-danger boton" (click)="borrarSolicitud(solicitud.solicitudes_num_solicitud)">X</button>
+                        </div>
                     </td>
                   </tr>
                 </tbody>
