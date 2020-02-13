@@ -1,10 +1,6 @@
 # Civi-Frontend
 
-<hr>
-
-## Qué es
-
-Es un portal de empleo desarrollado por Jesús Lemos Foncubierta y Jorge Vicens Valor.
+Portal de empleo desarrollado por Jesús Lemos Foncubierta y Jorge Vicens Valor.
 
 ## Tecnologías web utilizadas
 - Angular 8
