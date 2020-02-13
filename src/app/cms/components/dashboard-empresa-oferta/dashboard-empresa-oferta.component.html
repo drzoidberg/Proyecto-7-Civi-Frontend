@@ -1,6 +1,52 @@
+<div class="container">
 
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center">Crear Oferta</h2>
+                </div>
+            </div>
+            <form (submit)='crearOferta()' #form="ngForm">
+                <div class="row mb-3">
+                    <span>Título</span>
+                    <input class="form-control" type="text" matInput [(ngModel)]="nuevaOferta.titulo" [ngModelOptions]="{standalone: true}">
+                </div>
 
+                <div class="row mb-3">
+                    <span>Descripción</span>
+                    <input class="form-control" type="text" matInput [(ngModel)]="nuevaOferta.descripcion_oferta" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row mb-3 mr-1">
+                            <span>Salario</span>
+                            <input class="form-control" type="number" matInput [(ngModel)]="nuevaOferta.salario" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row mb-3">
+                            <span>Categoría</span>
+                            <input class="form-control" type="number" matInput [(ngModel)]="nuevaOferta.id_categoria" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <span>Ciudad</span>
+                    <input class="form-control" type="number" matInput [(ngModel)]="nuevaOferta.id_ciudad" [ngModelOptions]="{standalone: true}">
+                </div>
 
+              
+
+                <div class="row mb-3">
+                    <button class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------ -->
 <div class="contenedor">
     <div>
         <div class="container titulos">
