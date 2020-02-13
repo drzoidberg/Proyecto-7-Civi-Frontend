@@ -1,27 +1,26 @@
-# Pepino
+# Civi-Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+<hr>
 
-## Development server
+## Qué es
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Es un portal de empleo desarrollado por Jesús Lemos Foncubierta y Jorge Vicens Valor.
 
-## Code scaffolding
+## Tecnologías web utilizadas
+- Angular 8
+- Bootstrap 4
+- FontAwesome
+- Sweetalert 2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para la gestión del trabajo en equipo hemos utilizado [git flow](https://nvie.com/posts/a-successful-git-branching-model/) y tableros Trello.
 
-## Build
+## Instrucciones de uso
+1. Descargar repositorio backend
+2. Descargar repositorio frontend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- En el the backend ejecutar:
+    1. `composer regenerate`
+	2. `php artisan serve`
+- En el the frontend ejecutar:
+	- `ng serve`
+- Debería abrirse en http://localhost:4200/
