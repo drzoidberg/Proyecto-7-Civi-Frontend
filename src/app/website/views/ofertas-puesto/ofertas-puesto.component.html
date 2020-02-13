@@ -35,7 +35,7 @@
 </div>
 
 <!-- <app-filter-form></app-filter-form> -->
-<div class="container">
+<!-- <div class="container"> -->
     <!-- <div class="row mt-5">
         <div class="col-md-4">
             <form (submit)='buscarPuesto()' #form="ngForm">
@@ -49,16 +49,28 @@
 
     </div> -->
 
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
             <div class="col-md-6">
                 <form class="form-inline" (submit)='buscarPuesto()' #form="ngForm">
-                    <!-- <span>Buscar por ciudad</span> -->
+                    <span>Buscar por ciudad</span>
                     <input class="form-control mr-3" type="text" matInput [(ngModel)]="oferta.oferta" placeholder="Buscar puesto de trabajo" [ngModelOptions]="{standalone: true}">
                     <button class="btn btn-primary">Buscar</button>
                 </form>
             </div>
-        </div>
+        </div> -->
 
+    <div class="container">
+        <form (submit)='buscarPuesto()' #form="ngForm">
+            <div class="form-row mt-5">
+                <div class="form-group col-md-7 offset-2">
+                    <input class="form-control mr-3" type="text" matInput [(ngModel)]="oferta.oferta" placeholder="Buscar puesto de trabajo" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-2">
+                    <button class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -108,7 +120,7 @@
             </div>
         </div>
     </div> -->
-</div>
+<!-- </div> -->
 
 
 
