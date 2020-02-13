@@ -133,4 +133,20 @@ borrarOferta(id , Empresa):Observable<any>{
      return this.http.post(`http://localhost:8000/usuario/borrarsolicitud`, datos, httpOptions);
  
    }
+
+   crearOferta(crearOferta):Observable<any>{
+     console.log(crearOferta)
+    // let EmpresaJson= JSON.parse(Empresa);
+    // let datos={
+    //   id:id,
+    //   id_empresa:EmpresaJson[0].id,
+    //   remember_token:EmpresaJson[0].remember_token
+    // }
+    // console.log(datos)
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':crearOferta.remember_token })
+     };
+     return this.http.post(`http://localhost:8000/empresa/crearoferta`, crearOferta, httpOptions);
+ 
+   }
 }

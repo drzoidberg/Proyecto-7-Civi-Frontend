@@ -10,5 +10,6 @@ export interface Ofertastrabajos{
     "email": string,
     "foto": string,
     "nombre_empresa": string,
-    "descripcion_empresa": string
+    "descripcion_empresa": string,
+  
     }
