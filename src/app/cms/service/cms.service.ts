@@ -136,13 +136,7 @@ borrarOferta(id , Empresa):Observable<any>{
 
    crearOferta(crearOferta):Observable<any>{
      console.log(crearOferta)
-    // let EmpresaJson= JSON.parse(Empresa);
-    // let datos={
-    //   id:id,
-    //   id_empresa:EmpresaJson[0].id,
-    //   remember_token:EmpresaJson[0].remember_token
-    // }
-    // console.log(datos)
+ 
      const httpOptions = {
        headers: new HttpHeaders({ 'Content-Type':'application/json', 'Authorization':crearOferta.remember_token })
      };
