@@ -1,45 +1,39 @@
-<!-- <div>
-    <p>Foto</p>
-   <img src={{Empresa[0].foto}}>
-    <p>Nombre</p>
-    <p>{{Empresa[0].nombre_empresa}}</p>
-    <p>Apellido</p>
-    <p>{{Empresa[0].apellido}}</p>
-    <p>Email</p>
-    <p>{{Empresa[0].email}}</p>
-    <p>DNI</p>
-    <p>{{Empresa[0].dni}}</p>
-    <p>Descripcion</p>
-    <p>{{Empresa[0].descripcion}}</p>
-    <p>Telefono</p>
-    <p>{{Empresa[0].Telefono}}</p>
-    <p>Fecha Nacimiento</p>
-    <p>{{Empresa[0].fecha_nacimiento}}</p>
-</div> -->
 
-<div class="vistaPerfil">
-    <div class="container">
-    <form (submit)='cambiarPerfilUsuario()'>
-        <div class="row">
-        <div class=" col-md-6">
-        <label>Foto</label>
-        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}" >
-      
-        <label>NIF</label>
-        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nif" [ngModelOptions]="{standalone: true}" >
-      </div>
-      <div class=" col-md-6">
-        <label>Nombre</label>
-        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nombre_empresa" [ngModelOptions]="{standalone: true}" >
-      
-        <label>Descripcion</label>
-        <input class="form-control descripcion" type="text" [(ngModel)]="nuevoUsuario.descripcion_empresa" [ngModelOptions]="{standalone: true}" >
-      </div>
-      <div class="boton">
-        <button class="btn btn-primary">Modificar</button>
+  <div class="row">
+      <div class="col-md-6 offset-md-3 mt-5">
+          <div class="row">
+              <div class="col">
+                  <h2 class="text-center">Modificar perfil de Empresa</h2>
+              </div>
+          </div>
+          <form (submit)='cambiarPerfilUsuario()' #form="ngForm">
+              <div class="row">
+                  <div class="col-md-12 mb-3">
+                          <span>Nombre empresa</span>
+                          <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.nombre_empresa" [ngModelOptions]="{standalone: true}">
+                  </div>
+                </div>
 
-    </div>
-        </div>
-   </form>
-   <div>
-</div>
+                <div class="row">
+                  <div class="col-md-7  mb-3">
+                          <span>Foto</span>
+                          <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.foto" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <div class="col-md-5">
+                          <span>NIF</span>
+                          <input class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.nif" [ngModelOptions]="{standalone: true}">
+                  </div>
+                </div>
+                <div class="row">
+                      <div class="col-md-12  mb-3">
+                              <span>Descripción</span>
+                              <textarea class="form-control" type="text" matInput [(ngModel)]="nuevoUsuario.descripcion_empresa" [ngModelOptions]="{standalone: true}">
+                              </textarea>
+                      </div>
+              </div>
+              <div class="row mb-3 ">
+                  <button class="btn btn-primary ml-3">Modificar</button>
+              </div>
+          </form>
+      </div>
+  </div>
