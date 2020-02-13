@@ -77,7 +77,8 @@
                         <div class="col-md-5">
                             <div class="row mb-3">
                                 <span>Fecha De Nacimiento</span>
-                                <input class="form-control" type="Date" matInput [(ngModel)]="nuevoUsuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}">
+                                <input class="form-control" type="date" matInput [ngModel]="nuevoUsuario.fecha_nacimiento | date:'yyyy-MM-dd'"  (ngModelChange)="pedido.fecha = $event" placeholder="fecha" [ngModelOptions]="{standalone: true}">
+                                <!-- <input class="form-control" type="date" matInput [(ngModel)]="nuevoUsuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}"> -->
                             </div>
                         </div>
                     </div>
