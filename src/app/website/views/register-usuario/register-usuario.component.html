@@ -42,7 +42,7 @@
                     <div class="col-md-5">
                         <div class="row mb-3">
                             <span>Fecha De Nacimiento</span>
-                            <input class="form-control" type="Date" matInput [(ngModel)]="usuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}">
+                            <input class="form-control" type="string" matInput [(ngModel)]="usuario.fecha_nacimiento" [ngModelOptions]="{standalone: true}">
                         </div>
                     </div>
                 </div>
@@ -67,10 +67,10 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <!-- <div class="row mb-3">
                     <span>Foto</span>
                     <input class="form-control" type="text" matInput [(ngModel)]="usuario.foto" [ngModelOptions]="{standalone: true}">
-                </div>
+                </div> -->
                 <div class="row mb-3">
                     <button class="btn btn-primary">Enviar</button>
                 </div>
