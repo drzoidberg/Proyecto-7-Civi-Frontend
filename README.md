@@ -1,6 +1,6 @@
 # Civi-Frontend
 
-Portal de empleo desarrollado por Jesús Lemos Foncubierta y Jorge Vicens Valor.
+Portal de empleo desarrollado por [Jesús Lemos Foncubierta](https://github.com/JesusLemos) y [Jorge Vicens Valor](https://github.com/drzoidberg).
 
 ## Tecnologías web utilizadas
 - Angular 8
