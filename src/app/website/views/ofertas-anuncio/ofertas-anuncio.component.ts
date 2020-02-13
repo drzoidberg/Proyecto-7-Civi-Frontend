@@ -9,6 +9,8 @@ import {
   faBuilding
 } from '@fortawesome/free-solid-svg-icons';
 import { Solicitudesusuario } from 'src/app/models/solicitudesusuario.model';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ofertas-anuncio',
@@ -27,10 +29,29 @@ export class OfertasAnuncioComponent implements OnInit {
   ciudadImgPath = '../../../../assets/images/ciudad.jpg';
   destacadosImgPath = '../../../../assets/images/destacados.jpg';
   puestoTrabajoImgPath = '../../../../assets/images/puesto-trabajo.jpg';
-  constructor(private website:WebsiteService, private cms:CmsService) {}
+  constructor(private website:WebsiteService, private cms:CmsService, private router:Router) {}
 
   solicitarOferta(num){
-    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+    Swal.fire({
+      title: '¿Seguro?',
+      text: "¿Quieres solicitar está oferta?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire(
+          'Se ha procesado correctamente!',
+          '',
+          'success'
+        )
+        this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+        this.router.navigate(["/filtro-destacados"]).then(result=>{window.location.href = 'http://localhost:4200/administrar-solicitud-candidato';});
+      }
+    })
   }
 
 

@@ -19,14 +19,15 @@
                         <h2 style="color: white">Civi te permite encontrar el trabajo adecuado</h2>
                     </div>
                 <div class="col-md-7">
-                    <form (submit)='buscarCiudad()' #form="ngForm">
+                    <form (submit)='buscador()' #form="ngForm">
                         <div class="form-row">
                             <div class="col-md-9 mb-2 mt-4">
-                                <input type="text" class="form-control" placeholder="Buscar ofertas de..">
+                                <input type="text" class="form-control" placeholder="Buscar ofertas de.." [(ngModel)]="input.input" [ngModelOptions]="{standalone: true}">
                             </div>
 
                             <div class="col-md-3 mt-4">
-                                <button type="button" class="btn btn-buscar-empleo btn-block">BUSCAR</button>
+                                <!-- <button>algo</button> -->
+                                <button   class="btn btn-buscar-empleo btn-block">BUSCAR</button>
                             </div>
                         </div>
                     </form>

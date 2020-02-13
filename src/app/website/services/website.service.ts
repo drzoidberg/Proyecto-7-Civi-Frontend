@@ -96,5 +96,8 @@ export class WebsiteService {
     filtroSalario(salario):Observable<any> {
       return this.http.get(`http://localhost:8000/ofertas/salario/asc/${salario}`);
     }
+    filtroOmni(omni):Observable<any> {
+      return this.http.get(`http://localhost:8000/ofertas/omni/${omni}`);
+    }
   }
 

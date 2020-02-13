@@ -34,6 +34,7 @@ import { OfertasAnuncioComponent } from './website/views/ofertas-anuncio/ofertas
 import { OfertasPuestoComponent } from './website/views/ofertas-puesto/ofertas-puesto.component';
 import { OfertasComponent } from './website/views/ofertas/ofertas.component';
 import { OfertasSalarioComponent } from './website/views/ofertas-salario/ofertas-salario.component';
+import { OfertasOmniComponent } from './website/views/ofertas-omni/ofertas-omni.component';
 
 
 registerLocaleData(localeEs, 'es');
@@ -65,6 +66,7 @@ registerLocaleData(localeEs, 'es');
     OfertasPuestoComponent,
     OfertasComponent,
     OfertasSalarioComponent,
+    OfertasOmniComponent,
   ],
   imports: [
     BrowserModule,

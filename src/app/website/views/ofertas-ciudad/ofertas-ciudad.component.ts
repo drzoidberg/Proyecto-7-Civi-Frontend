@@ -7,6 +7,8 @@ import {
   faMapMarkerAlt,
   faBuilding
 } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ofertas-ciudad',
@@ -29,7 +31,7 @@ faCalendarAlt = faCalendarAlt;
   destacadosImgPath = '../../../../assets/images/destacados.jpg';
   puestoTrabajoImgPath = '../../../../assets/images/puesto-trabajo.jpg';
 
-  constructor(private website:WebsiteService) { }
+  constructor(private website:WebsiteService, private router:Router) { }
 
   buscarCiudad(){
 
@@ -37,7 +39,26 @@ faCalendarAlt = faCalendarAlt;
   }
   
   solicitarOferta(num){
-    this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+    Swal.fire({
+      title: '¿Seguro?',
+      text: "¿Quieres solicitar está oferta?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire(
+          'Se ha procesado correctamente!',
+          '',
+          'success'
+        )
+        this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
+        this.router.navigate(["/filtro-ciudad"]).then(result=>{window.location.href = 'http://localhost:4200/administrar-solicitud-candidato';});
+      }
+    })
   }
 
   ngOnInit() {

@@ -16,6 +16,7 @@ import { DashboardEmpresaSolicitudComponent } from './cms/components/dashboard-e
 import { DashboardEmpresaOfertaComponent } from './cms/components/dashboard-empresa-oferta/dashboard-empresa-oferta.component';
 import { DashboardUsuarioComponent } from './cms/components/dashboard-usuario/dashboard-usuario.component';
 import { OfertasSalarioComponent } from './website/views/ofertas-salario/ofertas-salario.component';
+import { OfertasOmniComponent } from './website/views/ofertas-omni/ofertas-omni.component';
 
 
 const routes: Routes = [
@@ -36,7 +37,7 @@ const routes: Routes = [
   {path:"administrar-ofertas-empresa", component:DashboardEmpresaOfertaComponent},
   {path:"administrar-solicitud-candidato", component:DashboardUsuarioComponent},
   {path:"filtro-salario", component:OfertasSalarioComponent},
-  
+  {path:"ofertas-omni", component:OfertasOmniComponent},
 ];
 
 @NgModule({

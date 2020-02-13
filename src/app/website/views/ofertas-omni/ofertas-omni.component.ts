@@ -1,38 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { Filtrosomni } from 'src/app/models/filtrosomni.model';
 import { WebsiteService } from '../../services/website.service';
-import { Filtros } from 'src/app/models/filtros.model';
 import {
   faCalendarAlt,
   faClock,
   faMapMarkerAlt,
   faBuilding
 } from '@fortawesome/free-solid-svg-icons';
-import { log } from 'util';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-ofertas',
-  templateUrl: './ofertas.component.html',
-  styleUrls: ['./ofertas.component.scss']
+  selector: 'app-ofertas-omni',
+  templateUrl: './ofertas-omni.component.html',
+  styleUrls: ['./ofertas-omni.component.scss']
 })
-export class OfertasComponent implements OnInit {
-  todasOfertas: Array<Filtros>;
-  Usuario = localStorage.getItem('Usuario');
+export class OfertasOmniComponent implements OnInit {
+  ofertaTrabajo:Array<Filtrosomni>=[]
+  Usuario=localStorage.getItem('Usuario')
+
+  oferta={
+    oferta:''
+  }
+  constructor(private website:WebsiteService, private router:Router) { }
   faCalendarAlt = faCalendarAlt;
   faClock = faClock;
   faMapMarkerAlt = faMapMarkerAlt;
   faBuilding = faBuilding;
-
-  todasLasCiudadesImgPath = '../../../../assets/images/todas-las-ciudades.jpg';
-  ciudadImgPath = '../../../../assets/images/ciudad.jpg';
-  destacadosImgPath = '../../../../assets/images/destacados.jpg';
-  puestoTrabajoImgPath = '../../../../assets/images/puesto-trabajo.jpg';
-
-  constructor(private website:WebsiteService, private router:Router) { }
+  buscarPuesto(){
+    this.website.filtroOmni(this.oferta.oferta).subscribe(res=> this.ofertaTrabajo = res);
+  }
 
   solicitarOferta(num){
-     Swal.fire({
+    Swal.fire({
       title: '¿Seguro?',
       text: "¿Quieres solicitar está oferta?",
       icon: 'warning',
@@ -49,13 +49,16 @@ export class OfertasComponent implements OnInit {
           'success'
         )
         this.website.solicitarOferta(num, this.Usuario).subscribe(res => console.log(res));
-        this.router.navigate(["/ofertas"]).then(result=>{window.location.href = 'http://localhost:4200/administrar-solicitud-candidato';});
+        this.router.navigate(["/ofertas-omni"]).then(result=>{window.location.href = 'http://localhost:4200/administrar-solicitud-candidato';});
       }
     })
-  
+    
   }
   ngOnInit() {
-    this.website.todasOfertas().subscribe(res=> this.todasOfertas= JSON.parse(res));
+   let buscador=localStorage.getItem('buscador');
+
+    this.website.filtroOmni(buscador).subscribe(res=> this.ofertaTrabajo = res);
+
   }
 
 }

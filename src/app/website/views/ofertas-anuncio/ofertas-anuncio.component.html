@@ -65,7 +65,7 @@
                             <div class="card-description">
                               {{oferta.descripcion_oferta}}
                             </div>
-                            <button href="#" class="btn civi-btn-primary" *ngIf=Usuario>Solicitar</button>
+                            <button href="#" class="btn civi-btn-primary" (click)="solicitarOferta(oferta.id)" *ngIf=Usuario>Solicitar</button>
                         </div>
                     </div>
                 </div>

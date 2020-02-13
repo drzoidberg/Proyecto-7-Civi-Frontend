@@ -1,5 +1,5 @@
 export interface Filtros{
-
+    "id":number,
     "titulo": string,
     "descripcion_oferta": string,
     "popularidad": number,
